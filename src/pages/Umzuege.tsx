@@ -1,30 +1,96 @@
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ArrowRight, Check, Package, Truck, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
-
 const Umzuege = () => {
-  const formFields = [
-    { id: "name", label: "Name / Vorname", type: "text", placeholder: "Ihr vollständiger Name", required: true },
-    { id: "address", label: "Adresse", type: "text", placeholder: "Ihre aktuelle Strasse und Hausnummer", required: true },
-    { id: "plz", label: "PLZ / Ort", type: "text", placeholder: "Postleitzahl und Ort", required: true },
-    { id: "phone", label: "Telefon", type: "tel", placeholder: "Ihre Telefonnummer für Rückfragen", required: true },
-    { id: "email", label: "E-Mail", type: "email", placeholder: "Ihre E-Mail-Adresse", required: true },
-    { id: "fromAddress", label: "Adresse von wo gezügelt werden muss", type: "text", placeholder: "Auszugsadresse", required: true },
-    { id: "fromRooms", label: "Anzahl Zimmer", type: "text", placeholder: "z.B. 3.5", required: true },
-    { id: "fromFloor", label: "Stockwerk", type: "text", placeholder: "z.B. 2. OG", required: true },
-    { id: "date", label: "Datum", type: "date", placeholder: "", required: true },
-    { id: "toAddress", label: "Adresse wohin gezügelt werden muss", type: "text", placeholder: "Einzugsadresse", required: true },
-    { id: "toRooms", label: "Anzahl Zimmer", type: "text", placeholder: "z.B. 4.5", required: true },
-    { id: "toFloor", label: "Stockwerk", type: "text", placeholder: "z.B. 3. OG", required: true },
-    { id: "lift", label: "Einsatz Möbellift", type: "select", placeholder: "ja / nein", required: true },
-    { id: "furniture", label: "Ungefähre Anzahl an grösseren Möbelstücken inkl. Fotos", type: "textarea", placeholder: "Beschreiben Sie kurz die zu transportierenden Möbelstücke", rows: 4, required: true },
-  ];
-
-  return (
-    <>
+  const formFields = [{
+    id: "name",
+    label: "Name / Vorname",
+    type: "text",
+    placeholder: "Ihr vollständiger Name",
+    required: true
+  }, {
+    id: "address",
+    label: "Adresse",
+    type: "text",
+    placeholder: "Ihre aktuelle Strasse und Hausnummer",
+    required: true
+  }, {
+    id: "plz",
+    label: "PLZ / Ort",
+    type: "text",
+    placeholder: "Postleitzahl und Ort",
+    required: true
+  }, {
+    id: "phone",
+    label: "Telefon",
+    type: "tel",
+    placeholder: "Ihre Telefonnummer für Rückfragen",
+    required: true
+  }, {
+    id: "email",
+    label: "E-Mail",
+    type: "email",
+    placeholder: "Ihre E-Mail-Adresse",
+    required: true
+  }, {
+    id: "fromAddress",
+    label: "Adresse von wo gezügelt werden muss",
+    type: "text",
+    placeholder: "Auszugsadresse",
+    required: true
+  }, {
+    id: "fromRooms",
+    label: "Anzahl Zimmer",
+    type: "text",
+    placeholder: "z.B. 3.5",
+    required: true
+  }, {
+    id: "fromFloor",
+    label: "Stockwerk",
+    type: "text",
+    placeholder: "z.B. 2. OG",
+    required: true
+  }, {
+    id: "date",
+    label: "Datum",
+    type: "date",
+    placeholder: "",
+    required: true
+  }, {
+    id: "toAddress",
+    label: "Adresse wohin gezügelt werden muss",
+    type: "text",
+    placeholder: "Einzugsadresse",
+    required: true
+  }, {
+    id: "toRooms",
+    label: "Anzahl Zimmer",
+    type: "text",
+    placeholder: "z.B. 4.5",
+    required: true
+  }, {
+    id: "toFloor",
+    label: "Stockwerk",
+    type: "text",
+    placeholder: "z.B. 3. OG",
+    required: true
+  }, {
+    id: "lift",
+    label: "Einsatz Möbellift",
+    type: "select",
+    placeholder: "ja / nein",
+    required: true
+  }, {
+    id: "furniture",
+    label: "Ungefähre Anzahl an grösseren Möbelstücken inkl. Fotos",
+    type: "textarea",
+    placeholder: "Beschreiben Sie kurz die zu transportierenden Möbelstücke",
+    rows: 4,
+    required: true
+  }];
+  return <>
       <Navbar />
       <main className="pt-20">
         <section className="py-16 md:py-24 bg-movers-light">
@@ -42,11 +108,7 @@ const Umzuege = () => {
                 </Link>
               </div>
               <div>
-                <img 
-                  src="/lovable-uploads/f2d7c652-fc84-4d8b-9a75-9b69b2117a56.png" 
-                  alt="Umzugsservice Teamarbeit" 
-                  className="w-full h-auto rounded-lg shadow-lg" 
-                />
+                <img alt="Umzugsservice Teamarbeit" className="w-full h-auto rounded-lg shadow-lg" src="https://plus.unsplash.com/premium_photo-1681825046030-e3a13ba21f74?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
               </div>
             </div>
           </div>
@@ -157,20 +219,12 @@ const Umzuege = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="section-title text-center mb-12">Offerte anfordern</h2>
               
-              <ContactForm 
-                title="Umzug planen" 
-                description="Für eine unverbindliche Offerte für Ihren Umzug bitten wir Sie, folgende Angaben auszufüllen."
-                fields={formFields}
-                submitButtonText="Umzugsofferte anfordern"
-                emailTo="info@moebellift.ch"
-              />
+              <ContactForm title="Umzug planen" description="Für eine unverbindliche Offerte für Ihren Umzug bitten wir Sie, folgende Angaben auszufüllen." fields={formFields} submitButtonText="Umzugsofferte anfordern" emailTo="info@moebellift.ch" />
             </div>
           </div>
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default Umzuege;
