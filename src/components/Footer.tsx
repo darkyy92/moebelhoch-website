@@ -1,10 +1,7 @@
-
 import { NavLink } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-movers-primary text-white pt-16 pb-8">
+  return <footer className="bg-movers-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -65,9 +62,7 @@ const Footer = () => {
               </p>
               <p className="flex items-center mb-2">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
-                <a href="mailto:info@moebellift.ch" className="hover:text-white transition-colors">
-                  info@moebellift.ch
-                </a>
+                <a href="mailto:info@moebellift.ch" className="hover:text-white transition-colors">info@basha.ch</a>
               </p>
             </address>
           </div>
@@ -90,8 +85,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
