@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, ChevronDown, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,21 +61,6 @@ const Navbar = () => {
             </NavLink>
           ))}
           
-          <div className="hidden xl:flex items-center gap-4 mx-4">
-            <a href="#" className={`${isScrolled ? 'text-movers-primary' : 'text-white'} hover:text-movers-yellow transition-colors`}>
-              <Facebook size={18} />
-            </a>
-            <a href="#" className={`${isScrolled ? 'text-movers-primary' : 'text-white'} hover:text-movers-yellow transition-colors`}>
-              <Twitter size={18} />
-            </a>
-            <a href="#" className={`${isScrolled ? 'text-movers-primary' : 'text-white'} hover:text-movers-yellow transition-colors`}>
-              <Instagram size={18} />
-            </a>
-            <a href="#" className={`${isScrolled ? 'text-movers-primary' : 'text-white'} hover:text-movers-yellow transition-colors`}>
-              <Linkedin size={18} />
-            </a>
-          </div>
-          
           <NavLink 
             to="/offerten-anfordern" 
             className={`${isScrolled ? 'bg-movers-secondary text-white' : 'bg-movers-yellow text-movers-primary'} hover:brightness-110 font-medium py-2 px-5 rounded-md transition-all duration-300`}
@@ -104,21 +89,6 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
-          
-          <div className="flex items-center gap-4 py-2">
-            <a href="#" className="text-movers-primary hover:text-movers-secondary transition-colors">
-              <Facebook size={18} />
-            </a>
-            <a href="#" className="text-movers-primary hover:text-movers-secondary transition-colors">
-              <Twitter size={18} />
-            </a>
-            <a href="#" className="text-movers-primary hover:text-movers-secondary transition-colors">
-              <Instagram size={18} />
-            </a>
-            <a href="#" className="text-movers-primary hover:text-movers-secondary transition-colors">
-              <Linkedin size={18} />
-            </a>
-          </div>
           
           <NavLink 
             to="/offerten-anfordern" 
