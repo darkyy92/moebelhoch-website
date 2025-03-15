@@ -45,7 +45,7 @@ const UeberUns = () => {
                   <p className="text-gray-600 mb-6">
                     EMMAUS Zürich ist ein Wohltätigkeitsverein, der sich für bedürftige Menschen einsetzt. Durch das Betreiben eines Brockenhauses werden nicht nur Möbel und Gegenstände wiederverwertet, sondern auch wichtige soziale Projekte finanziert.
                   </p>
-                  <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="EMMAUS Zürich" className="w-full h-auto rounded-lg shadow-md" />
+                  <img alt="EMMAUS Zürich" className="w-full h-auto rounded-lg shadow-md" src="https://bin.staticlocal.ch/localplace-images/c6/c67e9985837c3ede42726ec8c2062a3ab7a00e44/Eingang.png" />
                 </div>
                 
                 <div>
