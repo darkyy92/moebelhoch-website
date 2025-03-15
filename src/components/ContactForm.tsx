@@ -1,14 +1,15 @@
 
 import { useState } from 'react';
-import { Calendar, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 interface FormField {
   id: string;
   label: string;
   type: string;
-  placeholder: string;
+  placeholder?: string; // Make placeholder optional
   required?: boolean;
   rows?: number;
+  options?: Array<{value: string, label: string}>; // Add options for select fields
 }
 
 interface ContactFormProps {
@@ -80,16 +81,30 @@ const ContactForm = ({
                 name={field.id}
                 rows={field.rows || 4}
                 className="form-control"
-                placeholder={field.placeholder}
+                placeholder={field.placeholder || ''}
                 required={field.required}
               />
+            ) : field.type === 'select' && field.options ? (
+              <select
+                id={field.id}
+                name={field.id}
+                className="form-control"
+                required={field.required}
+              >
+                <option value="">{field.placeholder || 'Bitte wählen...'}</option>
+                {field.options.map(option => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
             ) : (
               <input
                 type={field.type}
                 id={field.id}
                 name={field.id}
                 className="form-control"
-                placeholder={field.placeholder}
+                placeholder={field.placeholder || ''}
                 required={field.required}
               />
             )}

@@ -11,7 +11,7 @@ const OffertenAnfordern = () => {
     { id: "plz", label: "PLZ / Ort", type: "text", placeholder: "Postleitzahl und Ort", required: true },
     { id: "phone", label: "Telefon", type: "tel", placeholder: "Ihre Telefonnummer für Rückfragen", required: true },
     { id: "email", label: "E-Mail", type: "email", placeholder: "Ihre E-Mail-Adresse", required: true },
-    { id: "service", label: "Gewünschte Dienstleistung", type: "select", options: [
+    { id: "service", label: "Gewünschte Dienstleistung", type: "select", placeholder: "Bitte wählen Sie eine Dienstleistung", options: [
       { value: "moebellift", label: "Möbellift mieten" },
       { value: "umzug", label: "Umzug" },
       { value: "raeumung", label: "Räumung & Entsorgung" },
