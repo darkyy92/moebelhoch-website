@@ -95,7 +95,7 @@ const MoebelliftMieten = () => {
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative pt-[56.25%] overflow-hidden">
-                  <img src="/lovable-uploads/de818e26-8c16-42cb-9e90-105064128923.png" alt="Grosser Piaggio Möbellift" className="absolute inset-0 h-full w-full object-cover" />
+                  <img alt="Grosser Piaggio Möbellift" className="absolute inset-0 h-full w-full object-cover" src="https://www.cng-mobility.ch/wp-content/uploads/2021/01/Porter_Header_1200x400pxl.jpg" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">Piaggio gross</h3>
