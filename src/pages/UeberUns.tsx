@@ -53,7 +53,7 @@ const UeberUns = () => {
                   <p className="text-gray-600 mb-6">
                     Die Basha's GmbH ist ein erfahrenes Unternehmen im Bereich Umzug und Möbeltransport. Mit modernem Equipment und einem qualifizierten Team sorgt Basha's für reibungslose Abläufe und zufriedene Kunden.
                   </p>
-                  <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Basha's GmbH" className="w-full h-auto rounded-lg shadow-md" />
+                  <img alt="Basha's GmbH" className="w-full h-auto rounded-lg shadow-md" src="https://www.lokalesgewerbe.ch/media/com_jbusinessdirectory/pictures/companies/44393/bashas7.jpg" />
                 </div>
               </div>
               
