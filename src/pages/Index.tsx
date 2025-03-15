@@ -141,7 +141,7 @@ const Index = () => {
 
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="h-48 overflow-hidden">
-                  <img src="/lovable-uploads/89220f2f-96ea-4cb8-9220-6524eb9e5e99.png" alt="Manueller Lift" className="w-full h-full object-cover" />
+                  <img alt="Manueller Lift" className="w-full h-full object-cover" src="https://tc-equipment.de/wp-content/uploads/TC-MA1-Moebelaufzug-Moebellift-Bauaufzuege-1.jpg" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-2">Manueller Lift</h3>
