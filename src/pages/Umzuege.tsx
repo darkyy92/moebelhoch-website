@@ -117,7 +117,7 @@ const Umzuege = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="section-title text-center mb-8">Unsere Umzugsdienstleistungen</h2>
+              <h2 className="section-title text-center mb-8">Unsere Umzugs-Dienstleistungen</h2>
               <p className="text-center text-gray-600 mb-12 text-lg">
                 Wir bieten Ihnen einen umfassenden Service für einen stressfreien Umzug.
               </p>
