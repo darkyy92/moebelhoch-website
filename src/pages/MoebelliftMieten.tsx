@@ -1,49 +1,32 @@
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TechnicalData from '../components/TechnicalData';
-
 const MoebelliftMieten = () => {
-  const specs = [
-    {
-      name: "Hubhöhe",
-      kleinPiaggio: "21 Meter (5. Stock)",
-      grossPiaggio: "30 Meter (9. Stock)",
-      mobilerLift: "12 Meter (3./4. Stock)"
-    },
-    {
-      name: "Maximale Nutzlast",
-      kleinPiaggio: "210kg",
-      grossPiaggio: "400kg",
-      mobilerLift: "Variabel"
-    },
-    {
-      name: "Kosten",
-      kleinPiaggio: "Pauschal: CHF 380.00\nPro Person / Stunde: CHF 80.00",
-      grossPiaggio: "Pauschal: CHF 450.00\nPro Person / Stunde: CHF 80.00",
-      mobilerLift: "Auf- & Abbau: CHF 700.00\nPro Tag: CHF 150.00"
-    },
-    {
-      name: "Einsatzbereich",
-      kleinPiaggio: "Vorteilhaft bei kleineren Strassen und kleinen Platzverhältnissen",
-      grossPiaggio: "Vorteilhaft bei breiteren Strassen oder Stockwerken ab 6. Stockwerk",
-      mobilerLift: "Abtransport von Bauschutt z.B. bei Umbauarbeiten"
-    }
-  ];
-
-  const securitySteps = [
-    "Über entsprechenden Link unverbindliche Offerte anfragen",
-    "Verfügbarkeit und Offerte wird geprüft und danach erhalten Sie eine provisorische Bestätigung",
-    "Per Google Maps wird geprüft, ob grundsätzlich der Einsatz eines Möbelliftes möglich ist",
-    "Falls ja, vereinbaren wir mit Ihnen einen Besichtigungstermin, um die Lage direkt vor Ort anzuschauen (dieser Service ist im Preis inbegriffen)",
-    "Falls ein Einsatz von einem unserer Möbellifte möglich ist, erhalten Sie von uns eine definitive Terminbestätigung inkl. Offerte",
-    "Einsatz des Möbellifts"
-  ];
-
-  return (
-    <>
+  const specs = [{
+    name: "Hubhöhe",
+    kleinPiaggio: "21 Meter (5. Stock)",
+    grossPiaggio: "30 Meter (9. Stock)",
+    mobilerLift: "12 Meter (3./4. Stock)"
+  }, {
+    name: "Maximale Nutzlast",
+    kleinPiaggio: "210kg",
+    grossPiaggio: "400kg",
+    mobilerLift: "Variabel"
+  }, {
+    name: "Kosten",
+    kleinPiaggio: "Pauschal: CHF 380.00\nPro Person / Stunde: CHF 80.00",
+    grossPiaggio: "Pauschal: CHF 450.00\nPro Person / Stunde: CHF 80.00",
+    mobilerLift: "Auf- & Abbau: CHF 700.00\nPro Tag: CHF 150.00"
+  }, {
+    name: "Einsatzbereich",
+    kleinPiaggio: "Vorteilhaft bei kleineren Strassen und kleinen Platzverhältnissen",
+    grossPiaggio: "Vorteilhaft bei breiteren Strassen oder Stockwerken ab 6. Stockwerk",
+    mobilerLift: "Abtransport von Bauschutt z.B. bei Umbauarbeiten"
+  }];
+  const securitySteps = ["Über entsprechenden Link unverbindliche Offerte anfragen", "Verfügbarkeit und Offerte wird geprüft und danach erhalten Sie eine provisorische Bestätigung", "Per Google Maps wird geprüft, ob grundsätzlich der Einsatz eines Möbelliftes möglich ist", "Falls ja, vereinbaren wir mit Ihnen einen Besichtigungstermin, um die Lage direkt vor Ort anzuschauen (dieser Service ist im Preis inbegriffen)", "Falls ein Einsatz von einem unserer Möbellifte möglich ist, erhalten Sie von uns eine definitive Terminbestätigung inkl. Offerte", "Einsatz des Möbellifts"];
+  return <>
       <Navbar />
       <main className="pt-20">
         <section className="py-16 md:py-24 bg-movers-light">
@@ -61,11 +44,7 @@ const MoebelliftMieten = () => {
                 </Link>
               </div>
               <div>
-                <img 
-                  src="/lovable-uploads/f33cea83-0811-4aee-870e-e924b75091ca.png" 
-                  alt="Möbellift im Einsatz" 
-                  className="w-full h-auto rounded-lg shadow-lg" 
-                />
+                <img alt="Möbellift im Einsatz" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/511be1c6-699d-46d8-b346-7a99a7ab8f90.png" />
               </div>
             </div>
           </div>
@@ -95,11 +74,7 @@ const MoebelliftMieten = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative pt-[56.25%] overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/0534d30c-3b29-483f-a186-3e4d7520a6a6.png" 
-                    alt="Kleiner Piaggio Möbellift" 
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
+                  <img src="/lovable-uploads/0534d30c-3b29-483f-a186-3e4d7520a6a6.png" alt="Kleiner Piaggio Möbellift" className="absolute inset-0 h-full w-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">Piaggio klein</h3>
@@ -120,11 +95,7 @@ const MoebelliftMieten = () => {
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative pt-[56.25%] overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/de818e26-8c16-42cb-9e90-105064128923.png" 
-                    alt="Grosser Piaggio Möbellift" 
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
+                  <img src="/lovable-uploads/de818e26-8c16-42cb-9e90-105064128923.png" alt="Grosser Piaggio Möbellift" className="absolute inset-0 h-full w-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">Piaggio gross</h3>
@@ -145,11 +116,7 @@ const MoebelliftMieten = () => {
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative pt-[56.25%] overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/89220f2f-96ea-4cb8-9220-6524eb9e5e99.png" 
-                    alt="Manueller Möbellift" 
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
+                  <img src="/lovable-uploads/89220f2f-96ea-4cb8-9220-6524eb9e5e99.png" alt="Manueller Möbellift" className="absolute inset-0 h-full w-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">Manueller Lift</h3>
@@ -186,8 +153,7 @@ const MoebelliftMieten = () => {
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="p-8">
                   <div className="space-y-6">
-                    {securitySteps.map((step, index) => (
-                      <div key={index} className="flex">
+                    {securitySteps.map((step, index) => <div key={index} className="flex">
                         <div className="flex-shrink-0">
                           <div className="flex items-center justify-center w-8 h-8 rounded-full bg-movers-light text-movers-primary font-bold">
                             {index + 1}
@@ -196,8 +162,7 @@ const MoebelliftMieten = () => {
                         <div className="ml-4">
                           <p className="text-gray-700">{step}</p>
                         </div>
-                      </div>
-                    ))}
+                      </div>)}
                     <div className="pt-4">
                       <p className="text-gray-700 font-medium">
                         Die Bedienung unserer beiden Piaggio Möbellifte erfolgt von einem unserer Operateure.<br />
@@ -228,8 +193,6 @@ const MoebelliftMieten = () => {
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default MoebelliftMieten;
