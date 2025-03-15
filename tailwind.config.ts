@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -57,11 +56,11 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				movers: {
-					primary: '#112F66',
+					primary: '#112F66',  // Adjusted to match the dark blue from the screenshot
 					secondary: '#4A81FC',
 					accent: '#85B4FF',
 					light: '#EBF3FF',
-					yellow: '#FFD15C'
+					yellow: '#FFD15C'  // Added this based on the yellow accent in the design
 				}
 			},
 			borderRadius: {

@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,10 +35,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-movers-primary py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <NavLink to="/" className="flex items-center gap-2">
-          <span className="text-movers-primary font-bold text-2xl">MöbelLift</span>
+          <div className="w-10 h-10 bg-movers-yellow flex items-center justify-center rounded">
+            <span className="text-movers-primary font-bold">ML</span>
+          </div>
+          <span className={`font-bold text-2xl ${isScrolled ? 'text-movers-primary' : 'text-white'}`}>MöbelLift</span>
         </NavLink>
 
         <div className="hidden lg:flex items-center gap-8">
@@ -47,21 +50,41 @@ const Navbar = () => {
               key={link.path} 
               to={link.path}
               className={({ isActive }) => 
-                `text-sm font-medium transition-colors ${isActive ? 'text-movers-secondary' : 'text-movers-primary hover:text-movers-secondary'}`
+                `text-sm font-medium transition-colors ${
+                  isScrolled 
+                    ? (isActive ? 'text-movers-secondary' : 'text-movers-primary hover:text-movers-secondary') 
+                    : (isActive ? 'text-movers-yellow' : 'text-white hover:text-movers-yellow')
+                }`
               }
             >
               {link.name}
             </NavLink>
           ))}
+          
+          <div className="hidden xl:flex items-center gap-4 mx-4">
+            <a href="#" className={`${isScrolled ? 'text-movers-primary' : 'text-white'} hover:text-movers-yellow transition-colors`}>
+              <Facebook size={18} />
+            </a>
+            <a href="#" className={`${isScrolled ? 'text-movers-primary' : 'text-white'} hover:text-movers-yellow transition-colors`}>
+              <Twitter size={18} />
+            </a>
+            <a href="#" className={`${isScrolled ? 'text-movers-primary' : 'text-white'} hover:text-movers-yellow transition-colors`}>
+              <Instagram size={18} />
+            </a>
+            <a href="#" className={`${isScrolled ? 'text-movers-primary' : 'text-white'} hover:text-movers-yellow transition-colors`}>
+              <Linkedin size={18} />
+            </a>
+          </div>
+          
           <NavLink 
             to="/offerten-anfordern" 
-            className="btn-primary"
+            className={`${isScrolled ? 'bg-movers-secondary text-white' : 'bg-movers-yellow text-movers-primary'} hover:brightness-110 font-medium py-2 px-5 rounded-md transition-all duration-300`}
           >
             Offerte anfordern
           </NavLink>
         </div>
 
-        <button onClick={toggleMenu} className="lg:hidden text-movers-primary">
+        <button onClick={toggleMenu} className={`lg:hidden ${isScrolled ? 'text-movers-primary' : 'text-white'}`}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -81,10 +104,26 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
+          
+          <div className="flex items-center gap-4 py-2">
+            <a href="#" className="text-movers-primary hover:text-movers-secondary transition-colors">
+              <Facebook size={18} />
+            </a>
+            <a href="#" className="text-movers-primary hover:text-movers-secondary transition-colors">
+              <Twitter size={18} />
+            </a>
+            <a href="#" className="text-movers-primary hover:text-movers-secondary transition-colors">
+              <Instagram size={18} />
+            </a>
+            <a href="#" className="text-movers-primary hover:text-movers-secondary transition-colors">
+              <Linkedin size={18} />
+            </a>
+          </div>
+          
           <NavLink 
             to="/offerten-anfordern" 
             onClick={() => setIsOpen(false)}
-            className="btn-primary text-center mt-4"
+            className="bg-movers-secondary text-white font-medium py-2 px-5 rounded-md text-center mt-4 hover:brightness-110 transition-all duration-300"
           >
             Offerte anfordern
           </NavLink>

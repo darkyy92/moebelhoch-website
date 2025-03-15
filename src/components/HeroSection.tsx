@@ -1,5 +1,5 @@
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface HeroSectionProps {
@@ -24,7 +24,7 @@ const HeroSection = ({
   secondaryButtonLink
 }: HeroSectionProps) => {
   return (
-    <section className="hero-section pt-32 pb-16 md:pt-40 md:pb-24">
+    <section className="bg-movers-primary pt-32 pb-16 md:pt-40 md:pb-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="z-10 animate-fade-in-up">
@@ -37,21 +37,22 @@ const HeroSection = ({
             </p>
             <div className="flex flex-wrap gap-4">
               {primaryButtonText && primaryButtonLink && (
-                <Link to={primaryButtonLink} className="btn-secondary">
+                <Link to={primaryButtonLink} className="bg-movers-yellow text-movers-primary hover:brightness-110 font-medium py-3 px-6 rounded-md transition-all duration-300 inline-flex items-center">
                   {primaryButtonText}
-                  <ArrowRight size={18} />
+                  <ArrowRight size={18} className="ml-2" />
                 </Link>
               )}
               {secondaryButtonText && secondaryButtonLink && (
-                <Link to={secondaryButtonLink} className="bg-transparent border-2 border-white hover:bg-white text-white hover:text-movers-primary font-medium py-3 px-6 rounded-md transition-all duration-300 inline-flex items-center">
+                <Link to={secondaryButtonLink} className="bg-transparent border-2 border-white hover:bg-white/10 text-white hover:text-movers-yellow font-medium py-3 px-6 rounded-md transition-all duration-300 inline-flex items-center">
+                  <Play size={18} className="mr-2" />
                   {secondaryButtonText}
                 </Link>
               )}
             </div>
           </div>
-          <div className="relative z-10 animate-fade-in lg:pl-12">
+          <div className="relative z-10 animate-fade-in">
             <img 
-              src={imageUrl} 
+              src="public/lovable-uploads/cabbb70b-b1c4-4de6-b925-3f3b20accd49.png" 
               alt="Möbellift in Aktion" 
               className="w-full h-auto rounded-lg shadow-xl" 
             />
