@@ -1,29 +1,75 @@
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ArrowRight, FileText, MessageSquare, Phone } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
-
 const OffertenAnfordern = () => {
-  const formFields = [
-    { id: "name", label: "Name / Vorname", type: "text", placeholder: "Ihr vollständiger Name", required: true },
-    { id: "address", label: "Adresse", type: "text", placeholder: "Ihre aktuelle Strasse und Hausnummer", required: true },
-    { id: "plz", label: "PLZ / Ort", type: "text", placeholder: "Postleitzahl und Ort", required: true },
-    { id: "phone", label: "Telefon", type: "tel", placeholder: "Ihre Telefonnummer für Rückfragen", required: true },
-    { id: "email", label: "E-Mail", type: "email", placeholder: "Ihre E-Mail-Adresse", required: true },
-    { id: "service", label: "Gewünschte Dienstleistung", type: "select", placeholder: "Bitte wählen Sie eine Dienstleistung", options: [
-      { value: "moebellift", label: "Möbellift mieten" },
-      { value: "umzug", label: "Umzug" },
-      { value: "raeumung", label: "Räumung & Entsorgung" },
-      { value: "reinigung", label: "Reinigung" },
-      { value: "komplett", label: "Komplettservice" },
-    ], required: true },
-    { id: "date", label: "Gewünschtes Datum", type: "date", placeholder: "", required: true },
-    { id: "message", label: "Mitteilung", type: "textarea", placeholder: "Beschreiben Sie bitte Ihr Anliegen", rows: 5, required: true },
-  ];
-
-  return (
-    <>
+  const formFields = [{
+    id: "name",
+    label: "Name / Vorname",
+    type: "text",
+    placeholder: "Ihr vollständiger Name",
+    required: true
+  }, {
+    id: "address",
+    label: "Adresse",
+    type: "text",
+    placeholder: "Ihre aktuelle Strasse und Hausnummer",
+    required: true
+  }, {
+    id: "plz",
+    label: "PLZ / Ort",
+    type: "text",
+    placeholder: "Postleitzahl und Ort",
+    required: true
+  }, {
+    id: "phone",
+    label: "Telefon",
+    type: "tel",
+    placeholder: "Ihre Telefonnummer für Rückfragen",
+    required: true
+  }, {
+    id: "email",
+    label: "E-Mail",
+    type: "email",
+    placeholder: "Ihre E-Mail-Adresse",
+    required: true
+  }, {
+    id: "service",
+    label: "Gewünschte Dienstleistung",
+    type: "select",
+    placeholder: "Bitte wählen Sie eine Dienstleistung",
+    options: [{
+      value: "moebellift",
+      label: "Möbellift mieten"
+    }, {
+      value: "umzug",
+      label: "Umzug"
+    }, {
+      value: "raeumung",
+      label: "Räumung & Entsorgung"
+    }, {
+      value: "reinigung",
+      label: "Reinigung"
+    }, {
+      value: "komplett",
+      label: "Komplettservice"
+    }],
+    required: true
+  }, {
+    id: "date",
+    label: "Gewünschtes Datum",
+    type: "date",
+    placeholder: "",
+    required: true
+  }, {
+    id: "message",
+    label: "Mitteilung",
+    type: "textarea",
+    placeholder: "Beschreiben Sie bitte Ihr Anliegen",
+    rows: 5,
+    required: true
+  }];
+  return <>
       <Navbar />
       <main className="pt-20">
         <section className="py-16 md:py-24 bg-movers-light">
@@ -48,9 +94,7 @@ const OffertenAnfordern = () => {
                 <p className="text-gray-600 mb-4">
                   Rufen Sie uns direkt an für eine persönliche Beratung.
                 </p>
-                <a href="tel:+41445555555" className="font-semibold text-movers-primary block">
-                  +41 44 555 55 55
-                </a>
+                <a href="tel:+41445555555" className="font-semibold text-movers-primary block">+41 44 801 90 60</a>
               </div>
               
               <div className="bg-white rounded-lg shadow-md p-6 text-center">
@@ -81,20 +125,12 @@ const OffertenAnfordern = () => {
             </div>
             
             <div className="max-w-4xl mx-auto" id="kontaktformular">
-              <ContactForm 
-                title="Kontaktformular" 
-                description="Für eine unverbindliche Offerte bitten wir Sie, folgende Angaben auszufüllen. Wir werden uns schnellstmöglich bei Ihnen melden."
-                fields={formFields}
-                submitButtonText="Offerte anfordern"
-                emailTo="info@moebellift.ch"
-              />
+              <ContactForm title="Kontaktformular" description="Für eine unverbindliche Offerte bitten wir Sie, folgende Angaben auszufüllen. Wir werden uns schnellstmöglich bei Ihnen melden." fields={formFields} submitButtonText="Offerte anfordern" emailTo="info@moebellift.ch" />
             </div>
           </div>
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default OffertenAnfordern;
