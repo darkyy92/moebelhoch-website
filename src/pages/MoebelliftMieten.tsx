@@ -74,7 +74,7 @@ const MoebelliftMieten = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative pt-[56.25%] overflow-hidden">
-                  <img src="/lovable-uploads/0534d30c-3b29-483f-a186-3e4d7520a6a6.png" alt="Kleiner Piaggio Möbellift" className="absolute inset-0 h-full w-full object-cover" />
+                  <img alt="Kleiner Piaggio Möbellift" className="absolute inset-0 h-full w-full object-cover" src="https://www.autosprint.ch/wp-content/uploads/2024/11/03_Piaggio_Porter_NPE-scaled.jpg" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">Piaggio klein</h3>
