@@ -1,26 +1,71 @@
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ArrowRight, Check, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
-
 const Reinigungspartner = () => {
-  const formFields = [
-    { id: "name", label: "Name / Vorname", type: "text", placeholder: "Ihr vollständiger Name", required: true },
-    { id: "address", label: "Adresse", type: "text", placeholder: "Ihre aktuelle Strasse und Hausnummer", required: true },
-    { id: "plz", label: "PLZ / Ort", type: "text", placeholder: "Postleitzahl und Ort", required: true },
-    { id: "phone", label: "Telefon", type: "tel", placeholder: "Ihre Telefonnummer für Rückfragen", required: true },
-    { id: "email", label: "E-Mail", type: "email", placeholder: "Ihre E-Mail-Adresse", required: true },
-    { id: "cleaningAddress", label: "Adresse der zu reinigenden Wohnung", type: "text", placeholder: "Adresse", required: true },
-    { id: "rooms", label: "Anzahl Zimmer", type: "text", placeholder: "z.B. 3.5", required: true },
-    { id: "floor", label: "Stockwerk", type: "text", placeholder: "z.B. 2. OG", required: true },
-    { id: "date", label: "Gewünschtes Datum", type: "date", placeholder: "", required: true },
-    { id: "notes", label: "Wichtige Bemerkungen", type: "textarea", placeholder: "Weitere wichtige Informationen", rows: 3 },
-  ];
-
-  return (
-    <>
+  const formFields = [{
+    id: "name",
+    label: "Name / Vorname",
+    type: "text",
+    placeholder: "Ihr vollständiger Name",
+    required: true
+  }, {
+    id: "address",
+    label: "Adresse",
+    type: "text",
+    placeholder: "Ihre aktuelle Strasse und Hausnummer",
+    required: true
+  }, {
+    id: "plz",
+    label: "PLZ / Ort",
+    type: "text",
+    placeholder: "Postleitzahl und Ort",
+    required: true
+  }, {
+    id: "phone",
+    label: "Telefon",
+    type: "tel",
+    placeholder: "Ihre Telefonnummer für Rückfragen",
+    required: true
+  }, {
+    id: "email",
+    label: "E-Mail",
+    type: "email",
+    placeholder: "Ihre E-Mail-Adresse",
+    required: true
+  }, {
+    id: "cleaningAddress",
+    label: "Adresse der zu reinigenden Wohnung",
+    type: "text",
+    placeholder: "Adresse",
+    required: true
+  }, {
+    id: "rooms",
+    label: "Anzahl Zimmer",
+    type: "text",
+    placeholder: "z.B. 3.5",
+    required: true
+  }, {
+    id: "floor",
+    label: "Stockwerk",
+    type: "text",
+    placeholder: "z.B. 2. OG",
+    required: true
+  }, {
+    id: "date",
+    label: "Gewünschtes Datum",
+    type: "date",
+    placeholder: "",
+    required: true
+  }, {
+    id: "notes",
+    label: "Wichtige Bemerkungen",
+    type: "textarea",
+    placeholder: "Weitere wichtige Informationen",
+    rows: 3
+  }];
+  return <>
       <Navbar />
       <main className="pt-20">
         <section className="py-16 md:py-24 bg-movers-light">
@@ -38,11 +83,7 @@ const Reinigungspartner = () => {
                 </Link>
               </div>
               <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Professionelle Reinigung" 
-                  className="w-full h-auto rounded-lg shadow-lg" 
-                />
+                <img alt="Professionelle Reinigung" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/0943f207-b488-43ee-9750-96b71c454525.jpg" />
               </div>
             </div>
           </div>
@@ -127,20 +168,12 @@ const Reinigungspartner = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="section-title text-center mb-12">Reinigungsofferte anfordern</h2>
               
-              <ContactForm 
-                title="Reinigung planen" 
-                description="Für eine unverbindliche Offerte für Ihre Endreinigung bitten wir Sie, folgende Angaben auszufüllen."
-                fields={formFields}
-                submitButtonText="Reinigungsofferte anfordern"
-                emailTo="info@moebellift.ch"
-              />
+              <ContactForm title="Reinigung planen" description="Für eine unverbindliche Offerte für Ihre Endreinigung bitten wir Sie, folgende Angaben auszufüllen." fields={formFields} submitButtonText="Reinigungsofferte anfordern" emailTo="info@moebellift.ch" />
             </div>
           </div>
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default Reinigungspartner;
