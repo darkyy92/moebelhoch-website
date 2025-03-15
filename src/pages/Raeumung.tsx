@@ -1,27 +1,78 @@
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ArrowRight, Check, Trash2, Recycle, Store } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
-
 const Raeumung = () => {
-  const formFields = [
-    { id: "name", label: "Name / Vorname", type: "text", placeholder: "Ihr vollständiger Name", required: true },
-    { id: "address", label: "Adresse", type: "text", placeholder: "Ihre aktuelle Strasse und Hausnummer", required: true },
-    { id: "plz", label: "PLZ / Ort", type: "text", placeholder: "Postleitzahl und Ort", required: true },
-    { id: "phone", label: "Telefon", type: "tel", placeholder: "Ihre Telefonnummer für Rückfragen", required: true },
-    { id: "email", label: "E-Mail", type: "email", placeholder: "Ihre E-Mail-Adresse", required: true },
-    { id: "clearingAddress", label: "Adresse der zu räumenden Räumlichkeit", type: "text", placeholder: "Adresse", required: true },
-    { id: "rooms", label: "Anzahl Zimmer", type: "text", placeholder: "z.B. 3.5", required: true },
-    { id: "floor", label: "Stockwerk", type: "text", placeholder: "z.B. 2. OG", required: true },
-    { id: "date", label: "Gewünschtes Datum", type: "date", placeholder: "", required: true },
-    { id: "items", label: "Zu entsorgende Gegenstände (mit Fotos falls möglich)", type: "textarea", placeholder: "Beschreiben Sie kurz, welche Gegenstände entsorgt werden sollen", rows: 4, required: true },
-    { id: "notes", label: "Wichtige Bemerkungen", type: "textarea", placeholder: "Weitere wichtige Informationen", rows: 3 },
-  ];
-
-  return (
-    <>
+  const formFields = [{
+    id: "name",
+    label: "Name / Vorname",
+    type: "text",
+    placeholder: "Ihr vollständiger Name",
+    required: true
+  }, {
+    id: "address",
+    label: "Adresse",
+    type: "text",
+    placeholder: "Ihre aktuelle Strasse und Hausnummer",
+    required: true
+  }, {
+    id: "plz",
+    label: "PLZ / Ort",
+    type: "text",
+    placeholder: "Postleitzahl und Ort",
+    required: true
+  }, {
+    id: "phone",
+    label: "Telefon",
+    type: "tel",
+    placeholder: "Ihre Telefonnummer für Rückfragen",
+    required: true
+  }, {
+    id: "email",
+    label: "E-Mail",
+    type: "email",
+    placeholder: "Ihre E-Mail-Adresse",
+    required: true
+  }, {
+    id: "clearingAddress",
+    label: "Adresse der zu räumenden Räumlichkeit",
+    type: "text",
+    placeholder: "Adresse",
+    required: true
+  }, {
+    id: "rooms",
+    label: "Anzahl Zimmer",
+    type: "text",
+    placeholder: "z.B. 3.5",
+    required: true
+  }, {
+    id: "floor",
+    label: "Stockwerk",
+    type: "text",
+    placeholder: "z.B. 2. OG",
+    required: true
+  }, {
+    id: "date",
+    label: "Gewünschtes Datum",
+    type: "date",
+    placeholder: "",
+    required: true
+  }, {
+    id: "items",
+    label: "Zu entsorgende Gegenstände (mit Fotos falls möglich)",
+    type: "textarea",
+    placeholder: "Beschreiben Sie kurz, welche Gegenstände entsorgt werden sollen",
+    rows: 4,
+    required: true
+  }, {
+    id: "notes",
+    label: "Wichtige Bemerkungen",
+    type: "textarea",
+    placeholder: "Weitere wichtige Informationen",
+    rows: 3
+  }];
+  return <>
       <Navbar />
       <main className="pt-20">
         <section className="py-16 md:py-24 bg-movers-light">
@@ -39,11 +90,7 @@ const Raeumung = () => {
                 </Link>
               </div>
               <div>
-                <img 
-                  src="/lovable-uploads/b9f7c74a-070b-44b1-aec6-d591f126d497.png" 
-                  alt="Räumung und Entsorgung" 
-                  className="w-full h-auto rounded-lg shadow-lg" 
-                />
+                <img alt="Räumung und Entsorgung" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/fa272a11-abd1-42ea-bce3-97c0d2a9721d.png" />
               </div>
             </div>
           </div>
@@ -155,20 +202,12 @@ const Raeumung = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="section-title text-center mb-12">Räumungsofferte anfordern</h2>
               
-              <ContactForm 
-                title="Räumung planen" 
-                description="Für eine unverbindliche Offerte für Ihre Räumung bitten wir Sie, folgende Angaben auszufüllen."
-                fields={formFields}
-                submitButtonText="Räumungsofferte anfordern"
-                emailTo="info@moebellift.ch"
-              />
+              <ContactForm title="Räumung planen" description="Für eine unverbindliche Offerte für Ihre Räumung bitten wir Sie, folgende Angaben auszufüllen." fields={formFields} submitButtonText="Räumungsofferte anfordern" emailTo="info@moebellift.ch" />
             </div>
           </div>
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default Raeumung;
