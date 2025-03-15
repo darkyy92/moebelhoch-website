@@ -1,12 +1,9 @@
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ArrowRight, Check, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const UeberUns = () => {
-  return (
-    <>
+  return <>
       <Navbar />
       <main className="pt-20">
         <section className="py-16 md:py-24 bg-movers-light">
@@ -14,21 +11,14 @@ const UeberUns = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-4xl font-bold text-movers-primary mb-6">Über Uns</h1>
-                <p className="text-lg text-gray-600 mb-8">
-                  Hinter MöbelLift steht eine wertvolle Zusammenarbeit zwischen dem Wohltätigkeitsverein EMMAUS Zürich und der Basha's GmbH. 
-                  Gemeinsam bieten wir Ihnen hochwertige Dienstleistungen rund um Umzug, Möbellift und Entsorgung.
-                </p>
+                <p className="text-lg text-gray-600 mb-8">Hinter Möbellift mieten steht eine wertvolle Zusammenarbeit zwischen dem Wohltätigkeitsverein EMMAUS Zürich und der Basha's GmbH. Gemeinsam bieten wir Ihnen hochwertige Dienstleistungen rund um Umzug, Möbellift und Entsorgung.</p>
                 <Link to="/offerten-anfordern" className="btn-primary">
                   Kontakt aufnehmen
                   <ArrowRight size={18} />
                 </Link>
               </div>
               <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Team von MöbelLift" 
-                  className="w-full h-auto rounded-lg shadow-lg" 
-                />
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Team von MöbelLift" className="w-full h-auto rounded-lg shadow-lg" />
               </div>
             </div>
           </div>
@@ -55,11 +45,7 @@ const UeberUns = () => {
                   <p className="text-gray-600 mb-6">
                     EMMAUS Zürich ist ein Wohltätigkeitsverein, der sich für bedürftige Menschen einsetzt. Durch das Betreiben eines Brockenhauses werden nicht nur Möbel und Gegenstände wiederverwertet, sondern auch wichtige soziale Projekte finanziert.
                   </p>
-                  <img 
-                    src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                    alt="EMMAUS Zürich" 
-                    className="w-full h-auto rounded-lg shadow-md" 
-                  />
+                  <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="EMMAUS Zürich" className="w-full h-auto rounded-lg shadow-md" />
                 </div>
                 
                 <div>
@@ -67,11 +53,7 @@ const UeberUns = () => {
                   <p className="text-gray-600 mb-6">
                     Die Basha's GmbH ist ein erfahrenes Unternehmen im Bereich Umzug und Möbeltransport. Mit modernem Equipment und einem qualifizierten Team sorgt Basha's für reibungslose Abläufe und zufriedene Kunden.
                   </p>
-                  <img 
-                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                    alt="Basha's GmbH" 
-                    className="w-full h-auto rounded-lg shadow-md" 
-                  />
+                  <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Basha's GmbH" className="w-full h-auto rounded-lg shadow-md" />
                 </div>
               </div>
               
@@ -130,8 +112,6 @@ const UeberUns = () => {
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default UeberUns;
