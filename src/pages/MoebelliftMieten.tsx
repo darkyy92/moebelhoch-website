@@ -116,7 +116,7 @@ const MoebelliftMieten = () => {
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative pt-[56.25%] overflow-hidden">
-                  <img src="/lovable-uploads/89220f2f-96ea-4cb8-9220-6524eb9e5e99.png" alt="Manueller Möbellift" className="absolute inset-0 h-full w-full object-cover" />
+                  <img alt="Manueller Möbellift" className="absolute inset-0 h-full w-full object-cover" src="https://tc-equipment.de/wp-content/uploads/TC-MA1-Moebelaufzug-Moebellift-Bauaufzuege-1.jpg" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">Manueller Lift</h3>
