@@ -92,7 +92,7 @@ const Reinigungspartner = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="section-title text-center mb-8">Unsere Reinigungsdienstleistungen</h2>
+              <h2 className="section-title text-center mb-8">Unsere Reinigungs-Dienstleistungen</h2>
               <p className="text-center text-gray-600 mb-12 text-lg">
                 Wir sorgen für eine makellose Übergabe Ihrer Wohnung mit unserer professionellen Reinigung.
               </p>
