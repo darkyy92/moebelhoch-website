@@ -173,7 +173,7 @@ const Index = () => {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
-                  <img src="/lovable-uploads/48fa91dc-ec58-4322-a9b7-41934ca4d2e3.png" alt="Möbelliftservice" className="w-full h-auto rounded-lg shadow-lg" />
+                  <img alt="Möbelliftservice" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/2c339d7f-c50e-4886-95c1-515c8d0c4b62.png" />
                 </div>
                 <div className="order-1 md:order-2">
                   <h2 className="section-title">Warum unseren Möbellift-Service wählen?</h2>
