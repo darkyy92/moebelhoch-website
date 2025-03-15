@@ -1,53 +1,35 @@
-
 import { Link } from 'react-router-dom';
 import { ArrowRight, TruckIcon, PackageIcon, BrushIcon, ArrowUpRight, Star } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ServiceCard from '../components/ServiceCard';
-
 const Index = () => {
-  const services = [
-    {
-      title: "Möbellift mieten",
-      description: "Wir verfügen über drei verschiedene Möbellift-Modelle, die je nach Art und Ort des Einsatzes optimal sind.",
-      icon: <TruckIcon size={32} />,
-      link: "/moebellift-mieten"
-    },
-    {
-      title: "Umzüge organisieren",
-      description: "Überlassen Sie Ihren Umzug nicht dem Zufall - unsere Experten unterstützen Sie mit Fachwissen und den richtigen Werkzeugen.",
-      icon: <PackageIcon size={32} />,
-      link: "/umzuege"
-    },
-    {
-      title: "Räumung & Entsorgung",
-      description: "Wir helfen Ihnen, Wohnungen und Räumlichkeiten schnell und professionell zu räumen und fachgerecht zu entsorgen.",
-      icon: <ArrowUpRight size={32} />,
-      link: "/raeumung"
-    },
-    {
-      title: "Reinigungsservice",
-      description: "Nach dem Umzug: Lassen Sie Ihre alte oder neue Wohnung professionell reinigen durch unseren Partner ALL Perfekt GmbH.",
-      icon: <BrushIcon size={32} />,
-      link: "/reinigungspartner"
-    }
-  ];
-
-  return (
-    <>
+  const services = [{
+    title: "Möbellift mieten",
+    description: "Wir verfügen über drei verschiedene Möbellift-Modelle, die je nach Art und Ort des Einsatzes optimal sind.",
+    icon: <TruckIcon size={32} />,
+    link: "/moebellift-mieten"
+  }, {
+    title: "Umzüge organisieren",
+    description: "Überlassen Sie Ihren Umzug nicht dem Zufall - unsere Experten unterstützen Sie mit Fachwissen und den richtigen Werkzeugen.",
+    icon: <PackageIcon size={32} />,
+    link: "/umzuege"
+  }, {
+    title: "Räumung & Entsorgung",
+    description: "Wir helfen Ihnen, Wohnungen und Räumlichkeiten schnell und professionell zu räumen und fachgerecht zu entsorgen.",
+    icon: <ArrowUpRight size={32} />,
+    link: "/raeumung"
+  }, {
+    title: "Reinigungsservice",
+    description: "Nach dem Umzug: Lassen Sie Ihre alte oder neue Wohnung professionell reinigen durch unseren Partner ALL Perfekt GmbH.",
+    icon: <BrushIcon size={32} />,
+    link: "/reinigungspartner"
+  }];
+  return <>
       <Navbar />
       <main>
-        <HeroSection 
-          title="Möbellift-Vermietung für stressfreie Umzüge"
-          subtitle="Einfach & Effizient"
-          description="Durch den Wohltätigkeitsverein EMMAUS Zürich – ein Brockenhaus des Abbé Pierre in Zusammenarbeit mit der Basha's GmbH"
-          imageUrl="/lovable-uploads/f33cea83-0811-4aee-870e-e924b75091ca.png"
-          primaryButtonText="Offerte anfordern"
-          primaryButtonLink="/offerten-anfordern"
-          secondaryButtonText="Mehr erfahren"
-          secondaryButtonLink="/moebellift-mieten"
-        />
+        <HeroSection title="Möbellift-Vermietung für stressfreie Umzüge" subtitle="Einfach & Effizient" description="Durch den Wohltätigkeitsverein EMMAUS Zürich – ein Brockenhaus des Abbé Pierre in Zusammenarbeit mit der Basha's GmbH" imageUrl="/lovable-uploads/f33cea83-0811-4aee-870e-e924b75091ca.png" primaryButtonText="Offerte anfordern" primaryButtonLink="/offerten-anfordern" secondaryButtonText="Mehr erfahren" secondaryButtonLink="/moebellift-mieten" />
 
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -60,15 +42,7 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                  link={service.link}
-                />
-              ))}
+              {services.map((service, index) => <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} link={service.link} />)}
             </div>
           </div>
         </section>
@@ -93,11 +67,7 @@ const Index = () => {
                 </Link>
               </div>
               <div className="relative">
-                <img 
-                  src="/lovable-uploads/967d914e-4ac6-436e-9ae5-6958a6e67da6.png" 
-                  alt="EMMAUS Brockenhaus" 
-                  className="w-full h-auto rounded-lg shadow-lg" 
-                />
+                <img alt="EMMAUS Brockenhaus" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/a55d6f74-86ee-44ac-929e-b4b55d4628c9.jpg" />
                 <div className="absolute -bottom-6 -left-6 bg-movers-primary text-white p-6 rounded-lg shadow-lg max-w-xs hidden md:block">
                   <p className="font-semibold text-lg mb-1">Soziales Engagement</p>
                   <p className="text-sm">Der erwirtschaftete Erlös unterstützt jedes Jahr lokale, nationale und internationale Projekte.</p>
@@ -119,11 +89,7 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/0534d30c-3b29-483f-a186-3e4d7520a6a6.png" 
-                    alt="Kleiner Piaggio Möbellift" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/lovable-uploads/0534d30c-3b29-483f-a186-3e4d7520a6a6.png" alt="Kleiner Piaggio Möbellift" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-2">Piaggio klein</h3>
@@ -141,10 +107,7 @@ const Index = () => {
                       Ideal für kleinere Strassen und Platzverhältnisse
                     </li>
                   </ul>
-                  <Link 
-                    to="/moebellift-mieten" 
-                    className="inline-flex items-center text-movers-secondary font-medium hover:text-movers-primary transition-colors"
-                  >
+                  <Link to="/moebellift-mieten" className="inline-flex items-center text-movers-secondary font-medium hover:text-movers-primary transition-colors">
                     Mehr erfahren <ArrowRight size={16} className="ml-1" />
                   </Link>
                 </div>
@@ -152,11 +115,7 @@ const Index = () => {
 
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/de818e26-8c16-42cb-9e90-105064128923.png" 
-                    alt="Grosser Piaggio Möbellift" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/lovable-uploads/de818e26-8c16-42cb-9e90-105064128923.png" alt="Grosser Piaggio Möbellift" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-2">Piaggio gross</h3>
@@ -174,10 +133,7 @@ const Index = () => {
                       Ideal für breitere Strassen oder Stockwerke ab 6. Stock
                     </li>
                   </ul>
-                  <Link 
-                    to="/moebellift-mieten" 
-                    className="inline-flex items-center text-movers-secondary font-medium hover:text-movers-primary transition-colors"
-                  >
+                  <Link to="/moebellift-mieten" className="inline-flex items-center text-movers-secondary font-medium hover:text-movers-primary transition-colors">
                     Mehr erfahren <ArrowRight size={16} className="ml-1" />
                   </Link>
                 </div>
@@ -185,11 +141,7 @@ const Index = () => {
 
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/89220f2f-96ea-4cb8-9220-6524eb9e5e99.png" 
-                    alt="Manueller Lift" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/lovable-uploads/89220f2f-96ea-4cb8-9220-6524eb9e5e99.png" alt="Manueller Lift" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-2">Manueller Lift</h3>
@@ -207,10 +159,7 @@ const Index = () => {
                       Flexibler Einsatz mit minimalen Platzbedarf
                     </li>
                   </ul>
-                  <Link 
-                    to="/moebellift-mieten" 
-                    className="inline-flex items-center text-movers-secondary font-medium hover:text-movers-primary transition-colors"
-                  >
+                  <Link to="/moebellift-mieten" className="inline-flex items-center text-movers-secondary font-medium hover:text-movers-primary transition-colors">
                     Mehr erfahren <ArrowRight size={16} className="ml-1" />
                   </Link>
                 </div>
@@ -224,11 +173,7 @@ const Index = () => {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
-                  <img 
-                    src="/lovable-uploads/48fa91dc-ec58-4322-a9b7-41934ca4d2e3.png" 
-                    alt="Möbelliftservice" 
-                    className="w-full h-auto rounded-lg shadow-lg" 
-                  />
+                  <img src="/lovable-uploads/48fa91dc-ec58-4322-a9b7-41934ca4d2e3.png" alt="Möbelliftservice" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
                 <div className="order-1 md:order-2">
                   <h2 className="section-title">Warum unseren Möbellift-Service wählen?</h2>
@@ -290,8 +235,6 @@ const Index = () => {
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default Index;
