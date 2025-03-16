@@ -1,3 +1,4 @@
+
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ArrowRight, Check, Heart } from 'lucide-react';
@@ -45,7 +46,9 @@ const UeberUns = () => {
                   <p className="text-gray-600 mb-6">
                     EMMAUS Zürich ist ein Wohltätigkeitsverein, der sich für bedürftige Menschen einsetzt. Durch das Betreiben eines Brockenhauses werden nicht nur Möbel und Gegenstände wiederverwertet, sondern auch wichtige soziale Projekte finanziert.
                   </p>
-                  <img alt="EMMAUS Zürich" className="w-full h-auto rounded-lg shadow-md" src="https://bin.staticlocal.ch/localplace-images/c6/c67e9985837c3ede42726ec8c2062a3ab7a00e44/Eingang.png" />
+                  <div className="h-64 overflow-hidden rounded-lg shadow-md">
+                    <img alt="EMMAUS Zürich" className="w-full h-full object-cover" src="https://bin.staticlocal.ch/localplace-images/c6/c67e9985837c3ede42726ec8c2062a3ab7a00e44/Eingang.png" />
+                  </div>
                 </div>
                 
                 <div>
@@ -53,7 +56,9 @@ const UeberUns = () => {
                   <p className="text-gray-600 mb-6">
                     Die Basha's GmbH ist ein erfahrenes Unternehmen im Bereich Umzug und Möbeltransport. Mit modernem Equipment und einem qualifizierten Team sorgt Basha's für reibungslose Abläufe und zufriedene Kunden.
                   </p>
-                  <img alt="Basha's GmbH" className="w-full h-auto rounded-lg shadow-md" src="https://www.lokalesgewerbe.ch/media/com_jbusinessdirectory/pictures/companies/44393/bashas7.jpg" />
+                  <div className="h-64 overflow-hidden rounded-lg shadow-md">
+                    <img alt="Basha's GmbH" className="w-full h-full object-cover" src="https://www.lokalesgewerbe.ch/media/com_jbusinessdirectory/pictures/companies/44393/bashas7.jpg" />
+                  </div>
                 </div>
               </div>
               
