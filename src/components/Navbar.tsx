@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -26,22 +25,28 @@ const Navbar = () => {
     };
   }, []);
 
-  const navLinks = [{
-    name: 'Möbellift mieten',
-    path: '/moebellift-mieten'
-  }, {
-    name: 'Umzüge',
-    path: '/umzuege'
-  }, {
-    name: 'Räumung & Entsorgung',
-    path: '/raeumung'
-  }, {
-    name: 'Reinigungspartner',
-    path: '/reinigungspartner'
-  }, {
-    name: 'Über Uns',
-    path: '/ueber-uns'
-  }];
+  const navLinks = [
+    {
+      name: 'Möbellift mieten',
+      path: '/moebellift-mieten'
+    },
+    {
+      name: 'Umzüge',
+      path: '/umzuege'
+    },
+    {
+      name: 'Räumung & Entsorgung',
+      path: '/raeumung'
+    },
+    {
+      name: 'Reinigungspartner',
+      path: '/reinigungspartner'
+    },
+    {
+      name: 'Über Uns',
+      path: '/ueber-uns'
+    }
+  ];
 
   return <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-movers-primary py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -49,7 +54,7 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/8b10ece2-1d07-4504-b2a2-0d1da6a24d6f.png" 
             alt="Möbellift Logo" 
-            className="w-10 h-10 object-contain"
+            className={`w-10 h-10 object-contain ${!isScrolled ? 'invert brightness-0 invert' : ''}`}
           />
           <span className={`font-bold text-2xl ${isScrolled ? 'text-movers-primary' : 'text-white'}`}>Möbellift mieten</span>
         </NavLink>
