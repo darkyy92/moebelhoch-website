@@ -1,12 +1,16 @@
+
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -15,11 +19,13 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   const navLinks = [{
     name: 'Möbellift mieten',
     path: '/moebellift-mieten'
@@ -36,12 +42,15 @@ const Navbar = () => {
     name: 'Über Uns',
     path: '/ueber-uns'
   }];
+
   return <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-movers-primary py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <NavLink to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-movers-yellow flex items-center justify-center rounded">
-            <span className="text-movers-primary font-bold">ML</span>
-          </div>
+          <img 
+            src="/lovable-uploads/8b10ece2-1d07-4504-b2a2-0d1da6a24d6f.png" 
+            alt="Möbellift Logo" 
+            className="w-10 h-10 object-contain"
+          />
           <span className={`font-bold text-2xl ${isScrolled ? 'text-movers-primary' : 'text-white'}`}>Möbellift mieten</span>
         </NavLink>
 
@@ -78,4 +87,5 @@ const Navbar = () => {
       </div>
     </nav>;
 };
+
 export default Navbar;
