@@ -156,9 +156,7 @@ const Umzuege = () => {
               
               <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
                 <h3 className="text-2xl font-bold text-movers-primary mb-6">Was wir für Sie tun</h3>
-                <p className="text-gray-700 mb-6">
-                  Sie räumen Ihr gesamtes Haab und Gut sorgfältig in Umzugskisten, helfen Ihnen beim Abbau Ihrer bestehenden Möbel und Möbelstücke, welche Sie nach Ihrem Umzug nicht mehr benötigen, werden entweder dem gemeinnützigen Brockenhaus EMMAUS Zürich zur Verfügung gestellt oder dann gleich fachmännisch für Sie entsorgt.
-                </p>
+                <p className="text-gray-700 mb-6">Sie räumen Ihren gesamten Hausrat sorgfältig in Umzugskisten und helfen Ihnen beim Abbau Ihrer Möbel. Möbel, die Sie nach dem Umzug nicht mehr benötigen, werden entweder dem Brockenhaus EMMAUS Zürich zur Verfügung gestellt oder fachgerecht entsorgt.</p>
                 
                 <h4 className="text-xl font-semibold text-movers-primary mb-4">Unsere Vorteile:</h4>
                 <ul className="space-y-3 mb-6">
