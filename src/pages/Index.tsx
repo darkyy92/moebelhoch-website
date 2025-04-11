@@ -67,7 +67,7 @@ const Index = () => {
                 </Link>
               </div>
               <div className="relative">
-                <img alt="EMMAUS Brockenhaus" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/a55d6f74-86ee-44ac-929e-b4b55d4628c9.jpg" />
+                <img alt="EMMAUS Brockenhaus" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/fbecb47f-92e6-4c15-8700-732308c2617b.png" />
                 <div className="absolute -bottom-6 -left-6 bg-movers-primary text-white p-6 rounded-lg shadow-lg max-w-xs hidden md:block">
                   <p className="font-semibold text-lg mb-1">Soziales Engagement</p>
                   <p className="text-sm">Der erwirtschaftete Erlös unterstützt jedes Jahr lokale, nationale und internationale Projekte.</p>
