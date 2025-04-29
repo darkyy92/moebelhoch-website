@@ -4,6 +4,7 @@
     {
       "name": "dev",
       "command": "npm run dev",
+      "process_type": "BACKGROUND",
       "stdoutFile": "logs/dev.log"
     },
     {
