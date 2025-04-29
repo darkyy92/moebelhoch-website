@@ -29,7 +29,7 @@ const Index = () => {
   return <>
       <Navbar />
       <main>
-        <HeroSection title="Möbellift-Vermietung für stressfreie Umzüge" subtitle="Einfach & Effizient" description="Durch den Wohltätigkeitsverein EMMAUS Zürich – ein Brockenhaus des Abbé Pierre in Zusammenarbeit mit der Basha's GmbH" imageUrl="/lovable-uploads/f33cea83-0811-4aee-870e-e924b75091ca.png" primaryButtonText="Offerte anfordern" primaryButtonLink="/offerten-anfordern" secondaryButtonText="Mehr erfahren" secondaryButtonLink="/moebellift-mieten" />
+        <HeroSection title="Möbellift-Vermietung für stressfreie Umzüge" subtitle="Einfach & Effizient" description="Durch den Wohltätigkeitsverein EMMAUS Zürich – ein Brockenhaus des Abbé Pierre" imageUrl="/lovable-uploads/f33cea83-0811-4aee-870e-e924b75091ca.png" primaryButtonText="Offerte anfordern" primaryButtonLink="/offerten-anfordern" secondaryButtonText="Mehr erfahren" secondaryButtonLink="/moebellift-mieten" />
 
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -56,10 +56,10 @@ const Index = () => {
                   Das 1956 von Abbé Pierre gegründete Brockenhaus EMMAUS Zürich mit Sitz in Dübendorf unterstützt seit Anbeginn Hilfsprojekte im In- und Ausland.
                 </p>
                 <p className="text-gray-600 mb-6">
-                  Ob der Verkauf von wunderbaren Antiquitäten und anderen schönen Gegenständen im Ladenlokal an der Ringwiesenstrasse 171, 8600 Dübendorf oder die Unterstützung durch den Aussendienst bei Räumungen, Entsorgungen oder Umzügen.
+                  Ob der Verkauf von wunderbaren Antiquitäten und anderen schönen Gegenständen im Ladenlokal an der Ringwiesenstrasse 171, 8600 Dübendorf oder die Unterstützung durch den Aussendienst bei Räumungen, Entsorgungen oder Umzügen – wir packen an, wo Hilfe gebraucht wird.
                 </p>
                 <p className="text-gray-600 mb-8">
-                  Um die Räumungen und Entsorgungen durch die EMMAUS Zürich noch effizienter zu gestalten, vermieten wir als kleinen oder grossen Umzugshelfer Möbellifte. Dies ist nur möglich dank der Kooperation mit der Firma Basha's GmbH.
+                  Für eine noch effizientere Durchführung von Räumungen und Umzügen setzen wir auf drei eigene Möbellifte: den Piaggio klein für enge Zufahrten, den Piaggio gross für grössere Einsätze sowie einen manuellen Möbellift für schwer zugängliche Orte. Diese stehen auch zur Vermietung bereit – als flexible Umzugshelfer, ganz nach Bedarf.
                 </p>
                 <Link to="/ueber-uns" className="btn-primary">
                   Mehr über uns

@@ -3,11 +3,11 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 const Footer = () => {
   return <footer className="bg-movers-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Möbellift mieten</h3>
             <p className="mb-4 text-gray-300">
-              Möbellift-Vermietung durch den Wohltätigkeitsverein EMMAUS Zürich in Zusammenarbeit mit der Basha's GmbH
+              Möbellift-Vermietung durch den Wohltätigkeitsverein EMMAUS Zürich
             </p>
           </div>
           
@@ -49,20 +49,6 @@ const Footer = () => {
                 <a href="mailto:er@emmaus-zh.ch" className="hover:text-white transition-colors">
                   er@emmaus-zh.ch
                 </a>
-              </p>
-            </address>
-          </div>
-          
-          <div>
-            <h3 className="text-xl font-bold mb-4">Basha's GmbH</h3>
-            <address className="not-italic text-gray-300">
-              <p className="flex items-start mb-2">
-                <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
-                <span>Dionias Basha<br />Borrweg 60<br />8055 Zürich</span>
-              </p>
-              <p className="flex items-center mb-2">
-                <Mail size={18} className="mr-2 flex-shrink-0" />
-                <a href="mailto:info@moebellift.ch" className="hover:text-white transition-colors">info@basha.ch</a>
               </p>
             </address>
           </div>
