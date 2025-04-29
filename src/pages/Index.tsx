@@ -59,7 +59,7 @@ const Index = () => {
                   Ob der Verkauf von wunderbaren Antiquitäten und anderen schönen Gegenständen im Ladenlokal an der Ringwiesenstrasse 171, 8600 Dübendorf oder die Unterstützung durch den Aussendienst bei Räumungen, Entsorgungen oder Umzügen – wir packen an, wo Hilfe gebraucht wird.
                 </p>
                 <p className="text-gray-600 mb-8">
-                  Für eine noch effizientere Durchführung von Räumungen und Umzügen setzen wir auf drei eigene Möbellifte: den Piaggio klein für enge Zufahrten, den Piaggio gross für grössere Einsätze sowie einen manuellen Möbellift für schwer zugängliche Orte. Diese stehen auch zur Vermietung bereit – als flexible Umzugshelfer, ganz nach Bedarf.
+                  Für eine noch effizientere Durchführung von Räumungen und Umzügen setzen wir auf drei eigene Möbellifte: den Piaggio klein für enge Zufahrten, den Piaggio gross für grössere Einsätze sowie einen Baulift für schwer zugängliche Orte. Diese stehen auch zur Vermietung bereit – als flexible Umzugshelfer, ganz nach Bedarf.
                 </p>
                 <Link to="/ueber-uns" className="btn-primary">
                   Mehr über uns
@@ -141,10 +141,10 @@ const Index = () => {
 
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="h-48 overflow-hidden">
-                  <img alt="Manueller Lift" className="w-full h-full object-cover" src="https://tc-equipment.de/wp-content/uploads/TC-MA1-Moebelaufzug-Moebellift-Bauaufzuege-1.jpg" />
+                  <img alt="Baulift" className="w-full h-full object-cover" src="https://tc-equipment.de/wp-content/uploads/TC-MA1-Moebelaufzug-Moebellift-Bauaufzuege-1.jpg" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-movers-primary mb-2">Manueller Lift</h3>
+                  <h3 className="text-xl font-bold text-movers-primary mb-2">Baulift</h3>
                   <ul className="space-y-2 mb-4">
                     <li className="flex items-start">
                       <span className="text-movers-secondary mr-2">✓</span>
