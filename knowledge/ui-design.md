@@ -13,7 +13,7 @@
 - Use useIsMobile hook for JS-based responsive logic
 
 ## Color Scheme
-- movers.primary: #112F66
+- movers.primary: #3973b5 (Main brand blue)
 - movers.secondary: #4A81FC
 - movers.accent: #85B4FF
 - movers.light: #EBF3FF
