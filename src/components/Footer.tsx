@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Möbellift mieten</h3>
+            <h3 className="text-xl font-bold mb-4">MöbelHoch</h3>
             <p className="mb-4 text-gray-300">
               Möbellift-Vermietung durch den Wohltätigkeitsverein EMMAUS Zürich
             </p>
@@ -56,7 +56,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} MöbelLift. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} MöbelHoch. Alle Rechte vorbehalten.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">

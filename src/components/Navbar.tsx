@@ -70,7 +70,7 @@ const Navbar = () => {
               </NavLink>)}
             
             <NavLink to="/offerten-anfordern" className={`${isScrolled ? 'bg-movers-secondary text-white' : 'bg-movers-yellow text-movers-primary'} hover:brightness-110 font-medium py-2 px-5 rounded-md transition-all duration-300 ml-4`}>
-              Offerte anfordern
+              Gratis Offerte
             </NavLink>
           </div>
         </div>
@@ -90,7 +90,7 @@ const Navbar = () => {
             </NavLink>)}
           
           <NavLink to="/offerten-anfordern" onClick={() => setIsOpen(false)} className="bg-movers-secondary text-white font-medium py-2 px-5 rounded-md text-center mt-4 hover:brightness-110 transition-all duration-300">
-            Offerte anfordern
+            Gratis Offerte
           </NavLink>
         </div>
       </div>
