@@ -72,7 +72,7 @@ const Reinigungspartner = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-4xl font-bold text-movers-primary mb-6">Reinigungspartner</h1>
+                <h1 className="text-4xl font-bold text-movers-primary mb-6">Endreinigung</h1>
                 <p className="text-lg text-gray-600 mb-8">
                   Für einen reibungslosen Umzug gehört auch eine professionelle Endreinigung dazu. 
                   Mit unseren zuverlässigen Reinigungspartnern bieten wir Ihnen eine Komplettlösung aus einer Hand.

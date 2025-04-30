@@ -21,7 +21,7 @@ const Index = () => {
     icon: <ArrowUpRight size={32} />,
     link: "/raeumung"
   }, {
-    title: "Reinigungsservice",
+    title: "Endreinigung",
     description: "Nach dem Umzug: Lassen Sie Ihre alte oder neue Wohnung professionell reinigen durch unseren Partner ALL Perfekt GmbH.",
     icon: <BrushIcon size={32} />,
     link: "/reinigungspartner"

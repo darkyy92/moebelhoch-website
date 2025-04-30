@@ -39,7 +39,7 @@ const Navbar = () => {
       path: '/raeumung'
     },
     {
-      name: 'Reinigungspartner',
+      name: 'Endreinigung',
       path: '/reinigungspartner'
     },
     {

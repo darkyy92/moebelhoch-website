@@ -31,7 +31,7 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink to="/reinigungspartner" className="text-gray-300 hover:text-white transition-colors">
-                  Reinigungspartner
+                  Endreinigung
                 </NavLink>
               </li>
             </ul>
