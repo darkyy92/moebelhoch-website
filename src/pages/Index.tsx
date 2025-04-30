@@ -29,7 +29,17 @@ const Index = () => {
   return <>
       <Navbar />
       <main>
-        <HeroSection title="Möbellift-Vermietung für stressfreie Umzüge" subtitle="Einfach & Effizient" description="Durch den Wohltätigkeitsverein EMMAUS Zürich – ein Brockenhaus des Abbé Pierre" imageUrl="/lovable-uploads/f33cea83-0811-4aee-870e-e924b75091ca.png" primaryButtonText="Offerte anfordern" primaryButtonLink="/offerten-anfordern" secondaryButtonText="Mehr erfahren" secondaryButtonLink="/moebellift-mieten" />
+        <HeroSection 
+          title="Möbellift mieten – schnell, sicher & günstig umziehen" 
+          subtitle="Vom sozialen Brockenhaus EMMAUS Zürich – zuverlässig & fair seit 1956" 
+          description="Durch den Wohltätigkeitsverein EMMAUS Zürich – ein Brockenhaus des Abbé Pierre" 
+          imageUrl="/lovable-uploads/9b6af9e7-6ebe-410a-a153-bd1a7e9253ea.png" 
+          primaryButtonText="Jetzt Offerte einholen" 
+          primaryButtonLink="/offerten-anfordern" 
+          secondaryButtonText="So funktioniert's" 
+          secondaryButtonLink="/moebellift-mieten"
+          trustNote="Über 1'000 erfolgreiche Umzüge in der Stadt Zürich – auch kurzfristig verfügbar"
+        />
 
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4">

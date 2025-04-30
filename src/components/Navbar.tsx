@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,23 +52,27 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <NavLink to="/" className="flex items-center gap-2">
           <img 
-            src="/lovable-uploads/8b10ece2-1d07-4504-b2a2-0d1da6a24d6f.png" 
-            alt="Möbellift Logo" 
-            className={`w-10 h-10 object-contain ${!isScrolled ? 'invert brightness-0 invert' : ''}`}
+            src={isScrolled ? '/images/logo-moebelhoch-schwarz-landscape.png' : '/images/logo-moebelhoch-weiss-landscape.png'} 
+            alt="MöbelHoch Logo" 
+            className="h-7 w-auto object-contain"
           />
-          <span className={`font-bold text-2xl ${isScrolled ? 'text-movers-primary' : 'text-white'}`}>Möbellift mieten</span>
+          <span className={`font-inter text-lg font-bold tracking-tight ${isScrolled ? 'text-movers-primary' : 'text-white'}`}>
+            MöbelHoch
+          </span>
         </NavLink>
 
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map(link => <NavLink key={link.path} to={link.path} className={({
-          isActive
-        }) => `text-sm font-medium transition-colors ${isScrolled ? isActive ? 'text-movers-secondary' : 'text-movers-primary hover:text-movers-secondary' : isActive ? 'text-movers-yellow' : 'text-white hover:text-movers-yellow'}`}>
-              {link.name}
-            </NavLink>)}
-          
-          <NavLink to="/offerten-anfordern" className={`${isScrolled ? 'bg-movers-secondary text-white' : 'bg-movers-yellow text-movers-primary'} hover:brightness-110 font-medium py-2 px-5 rounded-md transition-all duration-300`}>
-            Offerte anfordern
-          </NavLink>
+        <div className="hidden lg:flex items-center">
+          <div className="flex items-center gap-4">
+            {navLinks.map(link => <NavLink key={link.path} to={link.path} className={({
+            isActive
+          }) => `text-base font-semibold transition-colors px-4 ${isScrolled ? isActive ? 'text-movers-secondary' : 'text-movers-primary hover:text-movers-secondary' : isActive ? 'text-movers-yellow' : 'text-white hover:text-movers-yellow'}`}>
+                {link.name}
+              </NavLink>)}
+            
+            <NavLink to="/offerten-anfordern" className={`${isScrolled ? 'bg-movers-secondary text-white' : 'bg-movers-yellow text-movers-primary'} hover:brightness-110 font-medium py-2 px-5 rounded-md transition-all duration-300 ml-4`}>
+              Offerte anfordern
+            </NavLink>
+          </div>
         </div>
 
         <button onClick={toggleMenu} className={`lg:hidden ${isScrolled ? 'text-movers-primary' : 'text-white'}`}>
