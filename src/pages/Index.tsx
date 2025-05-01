@@ -4,6 +4,8 @@ import HeroSection from '../components/HeroSection';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ServiceCard from '../components/ServiceCard';
+import UnsereMoebellifte from '../components/UnsereMoebellifte';
+
 const Index = () => {
   const services = [{
     title: "Möbellift mieten",
@@ -87,96 +89,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-movers-light">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="section-title">Unsere Möbellifte</h2>
-              <p className="text-gray-600 text-lg">
-                Wir verfügen über drei verschiedene Möbellift-Modelle, die sich je nach Art und Ort des Einsatzes anbieten.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48 overflow-hidden">
-                  <img alt="Kleiner Piaggio Möbellift" className="w-full h-full object-cover" src="https://www.autosprint.ch/wp-content/uploads/2024/11/03_Piaggio_Porter_NPE-scaled.jpg" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-movers-primary mb-2">Piaggio klein</h3>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-start">
-                      <span className="text-movers-secondary mr-2">✓</span>
-                      Hubhöhe: 21 Meter (5. Stock)
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-movers-secondary mr-2">✓</span>
-                      Maximale Nutzlast: 210kg
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-movers-secondary mr-2">✓</span>
-                      Ideal für kleinere Strassen und Platzverhältnisse
-                    </li>
-                  </ul>
-                  <Link to="/moebellift-mieten" className="inline-flex items-center text-movers-secondary font-medium hover:text-movers-primary transition-colors">
-                    Mehr erfahren <ArrowRight size={16} className="ml-1" />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48 overflow-hidden">
-                  <img alt="Grosser Piaggio Möbellift" className="w-full h-full object-cover" src="https://www.cng-mobility.ch/wp-content/uploads/2021/01/Porter_Header_1200x400pxl.jpg" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-movers-primary mb-2">Piaggio gross</h3>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-start">
-                      <span className="text-movers-secondary mr-2">✓</span>
-                      Hubhöhe: 30 Meter (9. Stock)
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-movers-secondary mr-2">✓</span>
-                      Maximale Nutzlast: 400kg
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-movers-secondary mr-2">✓</span>
-                      Ideal für breitere Strassen oder Stockwerke ab 6. Stock
-                    </li>
-                  </ul>
-                  <Link to="/moebellift-mieten" className="inline-flex items-center text-movers-secondary font-medium hover:text-movers-primary transition-colors">
-                    Mehr erfahren <ArrowRight size={16} className="ml-1" />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48 overflow-hidden">
-                  <img alt="Baulift" className="w-full h-full object-cover" src="https://tc-equipment.de/wp-content/uploads/TC-MA1-Moebelaufzug-Moebellift-Bauaufzuege-1.jpg" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-movers-primary mb-2">Baulift</h3>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-start">
-                      <span className="text-movers-secondary mr-2">✓</span>
-                      Hubhöhe: 12 Meter (3./4. Stock)
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-movers-secondary mr-2">✓</span>
-                      Speziell für Abtransport von Bauschutt bei Umbauarbeiten
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-movers-secondary mr-2">✓</span>
-                      Flexibler Einsatz mit minimalen Platzbedarf
-                    </li>
-                  </ul>
-                  <Link to="/moebellift-mieten" className="inline-flex items-center text-movers-secondary font-medium hover:text-movers-primary transition-colors">
-                    Mehr erfahren <ArrowRight size={16} className="ml-1" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <UnsereMoebellifte />
 
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">

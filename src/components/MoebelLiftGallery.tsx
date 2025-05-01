@@ -1,13 +1,15 @@
-import { useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+} from "./ui/carousel";
+import { AspectRatio } from "./ui/aspect-ratio";
 import ResponsiveImage from "./ResponsiveImage";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 interface MoebelLiftGalleryProps {
   images: {
@@ -17,7 +19,61 @@ interface MoebelLiftGalleryProps {
   className?: string;
 }
 
+interface SwipeOverlayProps {
+  totalSlides: number;
+  currentSlide: number;
+  onInteraction: () => void;
+}
+
+const SwipeOverlay = ({ totalSlides, currentSlide, onInteraction }: SwipeOverlayProps) => {
+  return (
+    <div 
+      className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/50 to-transparent flex items-center justify-center"
+      onClick={onInteraction}
+    >
+      <div className="flex items-center gap-2 text-white animate-pulse-fade">
+        <ArrowLeft size={20} className="animate-slide-x" />
+        <span className="text-sm font-medium">Swipe</span>
+        <ArrowRight size={20} className="animate-slide-x" />
+      </div>
+      {totalSlides > 1 && (
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+          {Array.from({ length: totalSlides }).map((_, i) => (
+            <div
+              key={i}
+              className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
+                i === currentSlide ? "bg-white" : "bg-white/50"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const MoebelLiftGallery = ({ images, className }: MoebelLiftGalleryProps) => {
+  const isMobile = useIsMobile();
+  const [hasInteracted, setHasInteracted] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [api, setApi] = useState<any>(null);
+
+  const handleSelect = useCallback(() => {
+    if (!api) return;
+    setCurrentSlide(api.selectedScrollSnap());
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+
+    handleSelect();
+    api.on("select", handleSelect);
+
+    return () => {
+      api.off("select", handleSelect);
+    };
+  }, [api, handleSelect]);
+
   return (
     <div className="relative group">
       <Carousel
@@ -26,6 +82,7 @@ const MoebelLiftGallery = ({ images, className }: MoebelLiftGalleryProps) => {
           align: "start",
           loop: true,
         }}
+        setApi={setApi}
       >
         <CarouselContent>
           {images.map((image, index) => (
@@ -52,6 +109,13 @@ const MoebelLiftGallery = ({ images, className }: MoebelLiftGalleryProps) => {
             size="icon"
           />
         </div>
+        {isMobile && !hasInteracted && api && (
+          <SwipeOverlay 
+            totalSlides={images.length} 
+            currentSlide={currentSlide}
+            onInteraction={() => setHasInteracted(true)}
+          />
+        )}
       </Carousel>
     </div>
   );
