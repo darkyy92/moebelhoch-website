@@ -10,10 +10,6 @@
 - Never use the German character 'ß' - always use 'ss' following Swiss German convention
 - Example: Use 'Strasse' instead of 'Straße'
 
-## Deployment
-- Deploy through Lovable platform (Share -> Publish)
-- For custom domains, use Netlify (see docs.lovable.dev/tips-tricks/custom-domain/)
-
 ## Development Guidelines
 - Keep existing user comments exactly as they were
 - Make minimal edits to accomplish requests
@@ -22,6 +18,12 @@
 - Always start with mobile layout first, then scale up to larger screens
 - Use Tailwind's responsive prefixes (sm:, md:, lg:, xl:) consistently
 - Mobile breakpoint is set at 768px (useIsMobile hook)
+- IMPORTANT: Do not repeatedly check browser logs during development. Let the user handle browser testing themselves.
+- When fixing issues, make maximum 2 attempts to fix something before letting the user take over. This prevents wasting credits on multiple iterations.
+
+## Deployment
+- Deploy through Lovable platform (Share -> Publish)
+- For custom domains, use Netlify (see docs.lovable.dev/tips-tricks/custom-domain/)
 
 ## Verification Steps
 After making changes:

@@ -32,13 +32,13 @@ const Index = () => {
         <HeroSection 
           title="Möbellift mieten – schnell, sicher & günstig umziehen" 
           subtitle="Vom sozialen Brockenhaus EMMAUS Zürich – zuverlässig & fair seit 1956" 
-          description="Durch den Wohltätigkeitsverein EMMAUS Zürich – ein Brockenhaus des Abbé Pierre" 
+          description="Ihr Möbellift-Service in Zürich – schneller, sauberer Umzug ohne Treppenhaus-Schäden" 
           imageUrl="/lovable-uploads/9b6af9e7-6ebe-410a-a153-bd1a7e9253ea.png" 
           primaryButtonText="Jetzt Offerte einholen" 
           primaryButtonLink="/offerten-anfordern" 
           secondaryButtonText="So funktioniert's" 
           secondaryButtonLink="/moebellift-mieten"
-          trustNote="Über 1'000 erfolgreiche Umzüge in der Stadt Zürich – auch kurzfristig verfügbar"
+          trustNote="Hunderte erfolgreiche Umzüge in Zürich – auch kurzfristig verfügbar"
         />
 
         <section className="py-16 md:py-24 bg-gray-50">

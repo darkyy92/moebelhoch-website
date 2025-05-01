@@ -33,7 +33,7 @@ const HeroSection = ({
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               {title}
             </h1>
-            <p className="text-gray-200 text-lg mb-8 max-w-xl">
+            <p className="text-gray-200 text-lg mb-8 max-w-[480px]">
               {description}
             </p>
             <div className="flex flex-wrap gap-4 mb-6">

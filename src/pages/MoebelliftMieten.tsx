@@ -3,6 +3,8 @@ import Footer from '../components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TechnicalData from '../components/TechnicalData';
+import MoebelLiftGallery from '../components/MoebelLiftGallery';
+
 const MoebelliftMieten = () => {
   const specs = [{
     name: "Hubhöhe",
@@ -25,7 +27,48 @@ const MoebelliftMieten = () => {
     grossPiaggio: "Vorteilhaft bei breiteren Strassen oder Stockwerken ab 6. Stockwerk",
     mobilerLift: "Abtransport von Bauschutt z.B. bei Umbauarbeiten"
   }];
-  const securitySteps = ["Über entsprechenden Link unverbindliche Offerte anfragen", "Verfügbarkeit und Offerte wird geprüft und danach erhalten Sie eine provisorische Bestätigung", "Per Google Maps wird geprüft, ob grundsätzlich der Einsatz eines Möbelliftes möglich ist", "Falls ja, vereinbaren wir mit Ihnen einen Besichtigungstermin, um die Lage direkt vor Ort anzuschauen (dieser Service ist im Preis inbegriffen)", "Falls ein Einsatz von einem unserer Möbellifte möglich ist, erhalten Sie von uns eine definitive Terminbestätigung inkl. Offerte", "Einsatz des Möbellifts"];
+  const securitySteps = ["Über entsprechenden Link unverbindliche Offerte anfragen", "Verfügbarkeit und Offerte wird geprüft und danach erhalten Sie eine provisorische Bestätigung", "Per Google Maps wird geprüft, ob grundsätzlich der Einsatz eines Möbelliftes möglich ist", "Falls ja, vereinbaren wir mit Ihnen einen Besichtigungstermin, um die Lage direkt vor Ort anzuschauen (dieser Service ist im Preis inbegriffen)", "Falls ein Einsatz von einem unserer Möbelliften möglich ist, erhalten Sie von uns eine definitive Terminbestätigung inkl. Offerte", "Einsatz des Möbellifts"];
+  const piaggioKleinImages = [
+    {
+      src: "/images/moebellifte/piaggo-klein/piaggo-klein1.webp",
+      alt: "Kleiner Piaggio Möbellift von vorne"
+    },
+    {
+      src: "/images/moebellifte/piaggo-klein/piaggo-klein2.webp",
+      alt: "Kleiner Piaggio Möbellift von der Seite"
+    }
+  ];
+
+  const piaggioGrossImages = [
+    {
+      src: "/images/moebellifte/piaggo-gross/piaggo-gross1.webp",
+      alt: "Grosser Piaggio Möbellift von vorne"
+    },
+    {
+      src: "/images/moebellifte/piaggo-gross/piaggo-gross2.webp",
+      alt: "Grosser Piaggio Möbellift von der Seite"
+    },
+    {
+      src: "/images/moebellifte/piaggo-gross/piaggo-gross3.webp",
+      alt: "Grosser Piaggio Möbellift im Einsatz"
+    }
+  ];
+
+  const bauliftImages = [
+    {
+      src: "/images/moebellifte/baulift/baulift1.webp",
+      alt: "Baulift von vorne"
+    },
+    {
+      src: "/images/moebellifte/baulift/baulift2.webp",
+      alt: "Baulift von der Seite"
+    },
+    {
+      src: "/images/moebellifte/baulift/baulift3.webp",
+      alt: "Baulift im Einsatz"
+    }
+  ];
+
   return <>
       <Navbar />
       <main className="pt-20">
@@ -36,7 +79,7 @@ const MoebelliftMieten = () => {
                 <h1 className="text-4xl font-bold text-movers-primary mb-6">Möbellift mieten</h1>
                 <p className="text-lg text-gray-600 mb-8">
                   Wir verfügen über drei verschiedene Möbellift-Modelle, die sich je nach Art und Ort des Einsatzes anbieten. 
-                  Mit unseren Möbelliften transportieren Sie Ihre Möbel schnell, sicher und ohne Treppenhaus zu belasten.
+                  Mit unseren Möbelliften transportieren Sie Ihre Möbel schnell, sicher und ohne Schäden am Treppenhaus zu riskieren.
                 </p>
                 <Link to="/offerten-anfordern" className="btn-primary">
                   Offerte anfordern
@@ -44,7 +87,11 @@ const MoebelliftMieten = () => {
                 </Link>
               </div>
               <div>
-                <img alt="Möbellift im Einsatz" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/511be1c6-699d-46d8-b346-7a99a7ab8f90.png" />
+                <img 
+                  alt="Möbellift im Einsatz" 
+                  className="w-full h-auto rounded-lg shadow-lg" 
+                  src="/images/moebellifte/piaggo-gross/piaggo-gross1.webp" 
+                />
               </div>
             </div>
           </div>
@@ -69,12 +116,17 @@ const MoebelliftMieten = () => {
 
         <section className="py-16 md:py-24 bg-movers-light">
           <div className="container mx-auto px-4">
-            <h2 className="section-title text-center mb-12">Unsere Möbellifte</h2>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="section-title">Unsere Möbellifte</h2>
+              <p className="text-gray-600 text-lg">
+                Wir verfügen über drei verschiedene Möbellift-Modelle, die sich je nach Art und Ort des Einsatzes anbieten.
+              </p>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="relative pt-[56.25%] overflow-hidden">
-                  <img alt="Kleiner Piaggio Möbellift" className="absolute inset-0 h-full w-full object-cover" src="https://www.autosprint.ch/wp-content/uploads/2024/11/03_Piaggio_Porter_NPE-scaled.jpg" />
+                <div className="relative">
+                  <MoebelLiftGallery images={piaggioKleinImages} />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">Piaggio klein</h3>
@@ -94,8 +146,8 @@ const MoebelliftMieten = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="relative pt-[56.25%] overflow-hidden">
-                  <img alt="Grosser Piaggio Möbellift" className="absolute inset-0 h-full w-full object-cover" src="https://www.cng-mobility.ch/wp-content/uploads/2021/01/Porter_Header_1200x400pxl.jpg" />
+                <div className="relative">
+                  <MoebelLiftGallery images={piaggioGrossImages} />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">Piaggio gross</h3>
@@ -115,8 +167,8 @@ const MoebelliftMieten = () => {
               </div>
               
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="relative pt-[56.25%] overflow-hidden">
-                  <img alt="Baulift" className="absolute inset-0 h-full w-full object-cover" src="https://tc-equipment.de/wp-content/uploads/TC-MA1-Moebelaufzug-Moebellift-Bauaufzuege-1.jpg" />
+                <div className="relative">
+                  <MoebelLiftGallery images={bauliftImages} />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">Baulift</h3>

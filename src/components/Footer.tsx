@@ -59,15 +59,15 @@ const Footer = () => {
             © {new Date().getFullYear()} MöbelHoch. Alle Rechte vorbehalten.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <NavLink to="/datenschutz" className="bg-transparent border-2 border-white hover:bg-white/10 text-white hover:text-movers-yellow font-medium py-2 px-4 rounded-md transition-all duration-300">
               Datenschutz
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            </NavLink>
+            <NavLink to="/impressum" className="bg-transparent border-2 border-white hover:bg-white/10 text-white hover:text-movers-yellow font-medium py-2 px-4 rounded-md transition-all duration-300">
               Impressum
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            </NavLink>
+            <NavLink to="/agb" className="bg-transparent border-2 border-white hover:bg-white/10 text-white hover:text-movers-yellow font-medium py-2 px-4 rounded-md transition-all duration-300">
               AGB
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>
