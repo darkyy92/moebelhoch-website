@@ -1,15 +1,17 @@
-
 import { useState } from 'react';
 import { Mail, Phone } from 'lucide-react';
+import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
+import { cn } from "@/lib/utils";
 
 interface FormField {
   id: string;
   label: string;
   type: string;
-  placeholder?: string; // Make placeholder optional
+  placeholder?: string;
   required?: boolean;
   rows?: number;
-  options?: Array<{value: string, label: string}>; // Add options for select fields
+  options?: Array<{value: string, label: string}>;
+  defaultValue?: string;
 }
 
 interface ContactFormProps {
@@ -31,16 +33,28 @@ const ContactForm = ({
 }: ContactFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState<Record<string, string>>(() => {
+    const initialData: Record<string, string> = {};
+    fields.forEach(field => {
+      if (field.defaultValue) {
+        initialData[field.id] = field.defaultValue;
+      }
+    });
+    return initialData;
+  });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
     }, 1000);
+  };
+
+  const handleInputChange = (id: string, value: string) => {
+    setFormData(prev => ({ ...prev, [id]: value }));
   };
 
   if (isSubmitted) {
@@ -67,38 +81,15 @@ const ContactForm = ({
   return (
     <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
       {title && <h2 className="text-2xl font-bold text-movers-primary mb-2">{title}</h2>}
-      {description && <p className="text-gray-600 mb-6">{description}</p>}
+      {description && <p className="text-gray-600 mb-8">{description}</p>}
       
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {fields.map((field) => (
-          <div key={field.id}>
-            <label htmlFor={field.id} className="block text-sm font-medium text-gray-700 mb-1">
-              {field.label}{field.required && <span className="text-red-500">*</span>}
-            </label>
-            {field.type === 'textarea' ? (
-              <textarea
-                id={field.id}
-                name={field.id}
-                rows={field.rows || 4}
-                className="form-control"
-                placeholder={field.placeholder || ''}
-                required={field.required}
-              />
-            ) : field.type === 'select' && field.options ? (
-              <select
-                id={field.id}
-                name={field.id}
-                className="form-control"
-                required={field.required}
-              >
-                <option value="">{field.placeholder || 'Bitte wählen...'}</option>
-                {field.options.map(option => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            ) : (
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid gap-6 md:grid-cols-2">
+          {fields.slice(0, 5).map((field) => (
+            <div key={field.id} className={field.id === "email" ? "md:col-span-2" : ""}>
+              <label htmlFor={field.id} className="block text-sm font-medium text-gray-700 mb-1">
+                {field.label}{field.required && <span className="text-red-500">*</span>}
+              </label>
               <input
                 type={field.type}
                 id={field.id}
@@ -106,15 +97,104 @@ const ContactForm = ({
                 className="form-control"
                 placeholder={field.placeholder || ''}
                 required={field.required}
+                onChange={(e) => handleInputChange(field.id, e.target.value)}
               />
-            )}
+            </div>
+          ))}
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {fields.slice(5, 8).map((field) => (
+            <div key={field.id}>
+              <label htmlFor={field.id} className="block text-sm font-medium text-gray-700 mb-1">
+                {field.label}{field.required && <span className="text-red-500">*</span>}
+              </label>
+              <input
+                type={field.type}
+                id={field.id}
+                name={field.id}
+                className="form-control"
+                placeholder={field.placeholder || ''}
+                required={field.required}
+                onChange={(e) => handleInputChange(field.id, e.target.value)}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {fields.slice(8, 12).map((field) => (
+            <div key={field.id}>
+              <label htmlFor={field.id} className="block text-sm font-medium text-gray-700 mb-1">
+                {field.label}{field.required && <span className="text-red-500">*</span>}
+              </label>
+              <input
+                type={field.type}
+                id={field.id}
+                name={field.id}
+                className="form-control"
+                placeholder={field.placeholder || ''}
+                required={field.required}
+                onChange={(e) => handleInputChange(field.id, e.target.value)}
+              />
+            </div>
+          ))}
+        </div>
+
+        {fields.slice(12).map((field) => (
+          <div key={field.id}>
+            <label htmlFor={field.id} className="block text-sm font-medium text-gray-700 mb-1">
+              {field.label}{field.required && <span className="text-red-500">*</span>}
+            </label>
+            {field.type === 'radio' && field.options ? (
+              <RadioGroupPrimitive.Root
+                defaultValue={field.defaultValue}
+                required={field.required}
+                onValueChange={(value) => handleInputChange(field.id, value)}
+                className="flex gap-4"
+              >
+                {field.options.map(option => (
+                  <div key={option.value} className="flex items-center space-x-2">
+                    <RadioGroupPrimitive.Item
+                      value={option.value}
+                      id={`${field.id}-${option.value}`}
+                      className={cn(
+                        "aspect-square h-4 w-4 rounded-full border border-primary text-primary",
+                        "focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                        "disabled:cursor-not-allowed disabled:opacity-50"
+                      )}
+                    >
+                      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+                        <div className="h-2.5 w-2.5 rounded-full bg-primary" />
+                      </RadioGroupPrimitive.Indicator>
+                    </RadioGroupPrimitive.Item>
+                    <label
+                      htmlFor={`${field.id}-${option.value}`}
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      {option.label}
+                    </label>
+                  </div>
+                ))}
+              </RadioGroupPrimitive.Root>
+            ) : field.type === 'textarea' ? (
+              <textarea
+                id={field.id}
+                name={field.id}
+                rows={field.rows || 4}
+                className="form-control"
+                placeholder={field.placeholder || ''}
+                required={field.required}
+                onChange={(e) => handleInputChange(field.id, e.target.value)}
+              />
+            ) : null}
           </div>
         ))}
         
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn-primary w-full mt-6"
+          className="btn-primary w-full mt-8"
         >
           {isSubmitting ? (
             <span className="flex items-center justify-center">

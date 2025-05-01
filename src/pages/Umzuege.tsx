@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import { ArrowRight, Check, Package, Truck, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
+
 const Umzuege = () => {
   const formFields = [{
     id: "name",
@@ -78,17 +79,21 @@ const Umzuege = () => {
     required: true
   }, {
     id: "lift",
-    label: "Einsatz Möbellift",
-    type: "select",
-    placeholder: "ja / nein",
-    required: true
+    label: "Möbellift mieten?",
+    type: "radio",
+    required: true,
+    defaultValue: "ja",
+    options: [
+      { value: "ja", label: "Ja" },
+      { value: "nein", label: "Nein" }
+    ]
   }, {
     id: "furniture",
-    label: "Ungefähre Anzahl an grösseren Möbelstücken inkl. Fotos",
+    label: "Beschreibung der zu transportierenden Möbelstücke",
     type: "textarea",
-    placeholder: "Beschreiben Sie kurz die zu transportierenden Möbelstücke",
-    rows: 4,
-    required: true
+    placeholder: "Beschreiben Sie kurz die Art und ungefähre Anzahl der Möbelstücke",
+    required: true,
+    rows: 3
   }];
   return <>
       <Navbar />
@@ -100,7 +105,7 @@ const Umzuege = () => {
                 <h1 className="text-4xl font-bold text-movers-primary mb-6">Umzüge</h1>
                 <p className="text-lg text-gray-600 mb-8">
                   Sie wollen bei Ihrem Umzug nichts dem Zufall überlassen? 
-                  Dann haben wir neben unserem fahrenden Umzugshelfer mit EMMAUS Zürich und der Basha's GmbH auch zwei Experten an der Hand, welche Ihnen gerne fachmännisch zur Hand gehen.
+                  Dann haben wir mit EMMAUS Zürich einen erfahrenen Partner an der Hand, der Ihnen gerne fachmännisch zur Hand geht.
                 </p>
                 <Link to="/offerten-anfordern" className="btn-primary">
                   Offerte anfordern
@@ -149,14 +154,14 @@ const Umzuege = () => {
                   </div>
                   <h3 className="text-xl font-bold text-movers-primary mb-3">Fachmännische Beratung</h3>
                   <p className="text-gray-600">
-                    Unsere Experten von EMMAUS Zürich und Basha's GmbH unterstützen Sie mit ihrer Erfahrung.
+                    Unsere Experten von EMMAUS Zürich unterstützen Sie mit ihrer langjährigen Erfahrung.
                   </p>
                 </div>
               </div>
               
               <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
                 <h3 className="text-2xl font-bold text-movers-primary mb-6">Was wir für Sie tun</h3>
-                <p className="text-gray-700 mb-6">Sie räumen Ihren gesamten Hausrat sorgfältig in Umzugskisten und helfen Ihnen beim Abbau Ihrer Möbel. Möbel, die Sie nach dem Umzug nicht mehr benötigen, werden entweder dem Brockenhaus EMMAUS Zürich zur Verfügung gestellt oder fachgerecht entsorgt.</p>
+                <p className="text-gray-700 mb-6">Sie räumen Ihren gesamten Hausrat sorgfältig in Umzugskisten und helfen Ihnen beim Abbau Ihrer Möbel. Möbel, die Sie nach dem Umzug nicht mehr benötigen, werden dem Brockenhaus EMMAUS Zürich zur Verfügung gestellt oder fachgerecht entsorgt.</p>
                 
                 <h4 className="text-xl font-semibold text-movers-primary mb-4">Unsere Vorteile:</h4>
                 <ul className="space-y-3 mb-6">
@@ -183,21 +188,11 @@ const Umzuege = () => {
                 </ul>
                 
                 <p className="text-gray-700">
-                  Wir haben Ihr Interesse geweckt? Dann zögern Sie nicht, sich mit einem unseren beiden Partner in Verbindung zu setzen oder direkt hier eine unverbindliche Offerte einzuholen.
+                  Wir haben Ihr Interesse geweckt? Dann zögern Sie nicht, sich mit EMMAUS Zürich in Verbindung zu setzen oder direkt hier eine unverbindliche Offerte einzuholen.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-white rounded-lg shadow-md p-6">
-                  <h3 className="text-xl font-bold text-movers-primary mb-4">Basha's GmbH</h3>
-                  <p className="text-gray-600 mb-6">
-                    Professioneller Umzugsservice mit langjähriger Erfahrung und modernem Equipment.
-                  </p>
-                  <Link to="/offerten-anfordern" className="btn-outline w-full justify-center">
-                    Kontakt aufnehmen
-                  </Link>
-                </div>
-                
+              <div className="max-w-lg mx-auto">
                 <div className="bg-white rounded-lg shadow-md p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">EMMAUS Zürich</h3>
                   <p className="text-gray-600 mb-6">

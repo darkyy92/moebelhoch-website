@@ -5,6 +5,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi
 } from "./ui/carousel";
 import { AspectRatio } from "./ui/aspect-ratio";
 import ResponsiveImage from "./ResponsiveImage";
@@ -56,7 +57,7 @@ const MoebelLiftGallery = ({ images, className }: MoebelLiftGalleryProps) => {
   const isMobile = useIsMobile();
   const [hasInteracted, setHasInteracted] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [api, setApi] = useState<any>(null);
+  const [api, setApi] = useState<CarouselApi | null>(null);
 
   const handleSelect = useCallback(() => {
     if (!api) return;
