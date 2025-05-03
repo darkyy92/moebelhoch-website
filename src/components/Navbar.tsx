@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import QuoteChoiceModal from './QuoteChoiceModal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +49,25 @@ const Navbar = () => {
     }
   ];
 
+  // Quote button for desktop
+  const quoteButton = (
+    <button 
+      className={`${isScrolled ? 'bg-movers-secondary text-white' : 'bg-movers-yellow text-movers-primary'} hover:brightness-110 font-medium py-2 px-5 rounded-md transition-all duration-300 ml-4 h-11`}
+    >
+      Gratis Offerte
+    </button>
+  );
+
+  // Quote button for mobile
+  const mobileQuoteButton = (
+    <button 
+      onClick={() => setIsOpen(false)}
+      className="bg-movers-secondary text-white font-medium py-2 px-5 rounded-md text-center mt-4 hover:brightness-110 transition-all duration-300 h-11"
+    >
+      Gratis Offerte
+    </button>
+  );
+
   return <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-movers-primary py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <NavLink to="/" className="flex items-center gap-2">
@@ -69,9 +89,7 @@ const Navbar = () => {
                 {link.name}
               </NavLink>)}
             
-            <NavLink to="/offerten-anfordern" className={`${isScrolled ? 'bg-movers-secondary text-white' : 'bg-movers-yellow text-movers-primary'} hover:brightness-110 font-medium py-2 px-5 rounded-md transition-all duration-300 ml-4`}>
-              Gratis Offerte
-            </NavLink>
+            <QuoteChoiceModal trigger={quoteButton} />
           </div>
         </div>
 
@@ -89,9 +107,7 @@ const Navbar = () => {
               {link.name}
             </NavLink>)}
           
-          <NavLink to="/offerten-anfordern" onClick={() => setIsOpen(false)} className="bg-movers-secondary text-white font-medium py-2 px-5 rounded-md text-center mt-4 hover:brightness-110 transition-all duration-300">
-            Gratis Offerte
-          </NavLink>
+          <QuoteChoiceModal trigger={mobileQuoteButton} />
         </div>
       </div>
     </nav>;

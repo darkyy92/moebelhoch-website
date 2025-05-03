@@ -16,10 +16,10 @@ const Raeumung = () => {
                   Falls Sie eine Wohnung oder andere Räumlichkeiten räumen müssen und gleichzeitig Schweiss und Nerven sparen wollen, sind Sie bei uns an der richtigen Adresse.
                   Gemeinsam mit unseren kompetenten Partnerunternehmen und unseren Möbelliften helfen wir Ihnen die entsprechende Räumlichkeit innert wenigen Stunden komplett zu räumen.
                 </p>
-                <Link to="/offerten-anfordern" className="btn-primary">
-                  Offerte anfordern
+                <a href="https://calendly.com/moebelhoch/raeumung-entsorgung-telefon" target="_blank" rel="noopener" className="btn-primary">
+                  Räumungs-Beratung buchen
                   <ArrowRight size={18} />
-                </Link>
+                </a>
               </div>
               <div>
                 <img alt="Räumung und Entsorgung" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/fa272a11-abd1-42ea-bce3-97c0d2a9721d.png" />
@@ -128,10 +128,10 @@ const Raeumung = () => {
                   <p className="text-gray-600 mb-6">
                     Kontaktieren Sie uns für eine unverbindliche Beratung und erhalten Sie eine massgeschneiderte Offerte für Ihre individuellen Räumungsbedürfnisse.
                   </p>
-                  <Link to="/offerten-anfordern" className="btn-primary inline-flex items-center">
-                    Gratis Offerte anfordern
+                  <a href="https://calendly.com/moebelhoch/raeumung-entsorgung-telefon" target="_blank" rel="noopener" className="btn-primary inline-flex items-center">
+                    Räumungs-Beratung buchen
                     <ArrowRight size={18} className="ml-2" />
-                  </Link>
+                  </a>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-semibold text-movers-primary mb-4">Unsere Räumungsdienste umfassen:</h3>

@@ -81,10 +81,10 @@ const MoebelliftMieten = () => {
                   Wir verfügen über drei verschiedene Möbellift-Modelle, die sich je nach Art und Ort des Einsatzes anbieten. 
                   Mit unseren Möbelliften transportieren Sie Ihre Möbel schnell, sicher und ohne Schäden am Treppenhaus zu riskieren.
                 </p>
-                <Link to="/offerten-anfordern" className="btn-primary">
-                  Offerte anfordern
+                <a href="javascript:void(0)" onClick={(e) => { e.preventDefault(); document.querySelector('#moebellift-section').scrollIntoView({behavior: 'smooth'}); }}  className="btn-primary">
+                  Möbellift auswählen
                   <ArrowRight size={18} />
-                </Link>
+                </a>
               </div>
               <div>
                 <img 
@@ -114,7 +114,9 @@ const MoebelliftMieten = () => {
           </div>
         </section>
 
-        <UnsereMoebellifte />
+        <div id="moebellift-section">
+          <UnsereMoebellifte />
+        </div>
 
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
@@ -156,10 +158,10 @@ const MoebelliftMieten = () => {
             <p className="text-lg text-gray-200 max-w-2xl mx-auto mb-10">
               Kontaktieren Sie uns noch heute und erfahren Sie, wie wir Ihnen mit unserem Möbellift-Service helfen können.
             </p>
-            <Link to="/offerten-anfordern" className="bg-white text-movers-primary hover:bg-movers-yellow font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center">
-              Offerte anfordern
+            <a href="javascript:void(0)" onClick={(e) => { e.preventDefault(); document.querySelector('#moebellift-section').scrollIntoView({behavior: 'smooth'}); }} className="bg-white text-movers-primary hover:bg-movers-yellow font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center">
+              Möbellift auswählen
               <ArrowRight size={18} className="ml-2" />
-            </Link>
+            </a>
           </div>
         </section>
       </main>

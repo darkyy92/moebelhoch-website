@@ -107,10 +107,10 @@ const Umzuege = () => {
                   Sie wollen bei Ihrem Umzug nichts dem Zufall überlassen? 
                   Dann haben wir mit EMMAUS Zürich einen erfahrenen Partner an der Hand, der Ihnen gerne fachmännisch zur Hand geht.
                 </p>
-                <Link to="/offerten-anfordern" className="btn-primary">
-                  Offerte anfordern
+                <a href="https://calendly.com/moebelhoch/umzug-planung-telefon" target="_blank" rel="noopener" className="btn-primary">
+                  Umzug-Beratung buchen
                   <ArrowRight size={18} />
-                </Link>
+                </a>
               </div>
               <div>
                 <img alt="Umzugsservice Teamarbeit" className="w-full h-auto rounded-lg shadow-lg" src="https://plus.unsplash.com/premium_photo-1681825046030-e3a13ba21f74?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
@@ -198,9 +198,9 @@ const Umzuege = () => {
                   <p className="text-gray-600 mb-6">
                     Gemeinnütziger Umzugshelfer, der lokale und internationale Hilfsprojekte unterstützt.
                   </p>
-                  <Link to="/offerten-anfordern" className="btn-outline w-full justify-center">
-                    Kontakt aufnehmen
-                  </Link>
+                  <a href="https://calendly.com/moebelhoch/umzug-planung-telefon" target="_blank" rel="noopener" className="btn-outline w-full justify-center">
+                    Umzug-Beratung buchen
+                  </a>
                 </div>
               </div>
             </div>
@@ -210,9 +210,28 @@ const Umzuege = () => {
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="section-title text-center mb-12">Offerte anfordern</h2>
+              <h2 className="section-title text-center mb-12">Umzug planen</h2>
               
-              <ContactForm title="Umzug planen" description="Für eine unverbindliche Offerte für Ihren Umzug bitten wir Sie, folgende Angaben auszufüllen." fields={formFields} submitButtonText="Umzugsofferte anfordern" emailTo="info@moebellift.ch" />
+              <div className="bg-white p-8 rounded-lg shadow-md text-center">
+                <h3 className="text-xl font-bold text-movers-primary mb-6">Vereinbaren Sie ein Beratungsgespräch</h3>
+                <p className="text-gray-600 mb-8">
+                  Für eine persönliche Beratung zu Ihrem Umzug nehmen Sie einen Termin in unserem Kalender vor.
+                </p>
+                <a 
+                  href="https://calendly.com/moebelhoch/umzug-planung-telefon" 
+                  target="_blank" 
+                  rel="noopener" 
+                  className="btn-primary inline-flex items-center mx-auto"
+                >
+                  Umzug-Beratung buchen
+                  <ArrowRight size={18} className="ml-2" />
+                </a>
+                <p className="text-sm text-gray-500 mt-4">100 % unverbindlich – jederzeit stornierbar</p>
+              </div>
+              
+              <div className="hidden">
+                <ContactForm title="Umzug planen" description="Für eine unverbindliche Offerte für Ihren Umzug bitten wir Sie, folgende Angaben auszufüllen." fields={formFields} submitButtonText="Umzugsofferte anfordern" emailTo="info@moebellift.ch" />
+              </div>
             </div>
           </div>
         </section>

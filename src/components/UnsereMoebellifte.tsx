@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import MoebelLiftGallery from './MoebelLiftGallery';
 
@@ -73,6 +72,17 @@ const UnsereMoebellifte = () => {
                   <li>• Maximale Nutzlast von 210kg</li>
                 </ul>
               </div>
+              <div className="mt-6">
+                <a 
+                  href="https://calendly.com/moebelhoch/moebelhoch-piaggo-klein" 
+                  target="_blank" 
+                  rel="noopener"
+                  className="btn-primary inline-flex items-center"
+                >
+                  Piaggio klein anfragen
+                  <ArrowRight size={18} className="ml-2" />
+                </a>
+              </div>
             </div>
           </div>
           
@@ -93,6 +103,17 @@ const UnsereMoebellifte = () => {
                   <li>• Breitere Strassen oder höhere Gebäude</li>
                   <li>• Schwerere Lasten bis 400kg</li>
                 </ul>
+              </div>
+              <div className="mt-6">
+                <a 
+                  href="https://calendly.com/moebelhoch/piaggio-gross-moebellift-buchen" 
+                  target="_blank" 
+                  rel="noopener"
+                  className="btn-primary inline-flex items-center"
+                >
+                  Piaggio gross anfragen
+                  <ArrowRight size={18} className="ml-2" />
+                </a>
               </div>
             </div>
           </div>
@@ -115,15 +136,19 @@ const UnsereMoebellifte = () => {
                   <li>• Flexible Anwendungsmöglichkeiten</li>
                 </ul>
               </div>
+              <div className="mt-6">
+                <a 
+                  href="https://calendly.com/moebelhoch/baulift-buchen" 
+                  target="_blank" 
+                  rel="noopener"
+                  className="btn-primary inline-flex items-center"
+                >
+                  Baulift anfragen
+                  <ArrowRight size={18} className="ml-2" />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div className="text-center">
-          <Link to="/offerten-anfordern" className="btn-primary">
-            Möbellift anfragen
-            <ArrowRight size={18} />
-          </Link>
         </div>
       </div>
     </section>

@@ -77,10 +77,10 @@ const Reinigungspartner = () => {
                   Für einen reibungslosen Umzug gehört auch eine professionelle Endreinigung dazu. 
                   Mit unseren zuverlässigen Reinigungspartnern bieten wir Ihnen eine Komplettlösung aus einer Hand.
                 </p>
-                <Link to="/offerten-anfordern" className="btn-primary">
-                  Reinigung anfragen
+                <a href="https://calendly.com/moebelhoch/endreinigung-telefon" target="_blank" rel="noopener" className="btn-primary">
+                  Reinigungs-Beratung buchen
                   <ArrowRight size={18} />
-                </Link>
+                </a>
               </div>
               <div>
                 <img alt="Professionelle Reinigung" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/0943f207-b488-43ee-9750-96b71c454525.jpg" />
@@ -166,9 +166,28 @@ const Reinigungspartner = () => {
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="section-title text-center mb-12">Reinigungsofferte anfordern</h2>
+              <h2 className="section-title text-center mb-12">Reinigung planen</h2>
               
-              <ContactForm title="Reinigung planen" description="Für eine unverbindliche Offerte für Ihre Endreinigung bitten wir Sie, folgende Angaben auszufüllen." fields={formFields} submitButtonText="Reinigungsofferte anfordern" emailTo="info@moebellift.ch" />
+              <div className="bg-white p-8 rounded-lg shadow-md text-center">
+                <h3 className="text-xl font-bold text-movers-primary mb-6">Vereinbaren Sie ein Beratungsgespräch</h3>
+                <p className="text-gray-600 mb-8">
+                  Für eine persönliche Beratung zu Ihrer Endreinigung nehmen Sie einen Termin in unserem Kalender vor.
+                </p>
+                <a 
+                  href="https://calendly.com/moebelhoch/endreinigung-telefon" 
+                  target="_blank" 
+                  rel="noopener" 
+                  className="btn-primary inline-flex items-center mx-auto"
+                >
+                  Reinigungs-Beratung buchen
+                  <ArrowRight size={18} className="ml-2" />
+                </a>
+                <p className="text-sm text-gray-500 mt-4">100 % unverbindlich – jederzeit stornierbar</p>
+              </div>
+              
+              <div className="hidden">
+                <ContactForm title="Reinigung planen" description="Für eine unverbindliche Offerte für Ihre Endreinigung bitten wir Sie, folgende Angaben auszufüllen." fields={formFields} submitButtonText="Reinigungsofferte anfordern" emailTo="info@moebellift.ch" />
+              </div>
             </div>
           </div>
         </section>

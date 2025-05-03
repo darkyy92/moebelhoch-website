@@ -1,7 +1,8 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { ArrowRight, FileText, MessageSquare, Phone } from 'lucide-react';
+import { ArrowRight, Calendar, MessageSquare, Phone } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+
 const OffertenAnfordern = () => {
   const formFields = [{
     id: "name",
@@ -94,7 +95,7 @@ const OffertenAnfordern = () => {
                 <p className="text-gray-600 mb-4">
                   Rufen Sie uns direkt an für eine persönliche Beratung.
                 </p>
-                <a href="tel:+41445555555" className="font-semibold text-movers-primary block">+41 44 801 90 60</a>
+                <a href="tel:+41448019060" className="font-semibold text-movers-primary block">+41 44 801 90 60</a>
               </div>
               
               <div className="bg-white rounded-lg shadow-md p-6 text-center">
@@ -112,19 +113,88 @@ const OffertenAnfordern = () => {
               
               <div className="bg-white rounded-lg shadow-md p-6 text-center">
                 <div className="w-16 h-16 bg-movers-light rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileText size={28} className="text-movers-secondary" />
+                  <Calendar size={28} className="text-movers-secondary" />
                 </div>
-                <h3 className="text-xl font-bold text-movers-primary mb-3">Formular</h3>
+                <h3 className="text-xl font-bold text-movers-primary mb-3">Termin buchen</h3>
                 <p className="text-gray-600 mb-4">
-                  Nutzen Sie unser Online-Formular für eine schnelle Anfrage.
+                  Buchen Sie online einen Beratungstermin mit uns.
                 </p>
-                <a href="#kontaktformular" className="font-semibold text-movers-primary block">
-                  Zum Formular scrollen
+                <a href="#calendly-section" className="font-semibold text-movers-primary block">
+                  Zu den Terminen
                 </a>
               </div>
             </div>
             
-            <div className="max-w-4xl mx-auto" id="kontaktformular">
+            <div className="max-w-4xl mx-auto mb-20" id="calendly-section">
+              <h2 className="section-title text-center mb-12">Beratungstermin buchen</h2>
+              
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="mb-10">
+                  <h3 className="text-xl font-bold text-movers-primary mb-4">Möbellift</h3>
+                  <div className="flex flex-wrap gap-4">
+                    <a 
+                      href="https://calendly.com/moebelhoch/baulift-buchen" 
+                      target="_blank" 
+                      rel="noopener" 
+                      className="h-11 inline-flex items-center justify-center rounded-full px-5 py-2 bg-movers-light text-movers-primary font-medium hover:bg-movers-light/80 transition-colors"
+                    >
+                      Baulift
+                    </a>
+                    <a 
+                      href="https://calendly.com/moebelhoch/piaggio-gross-moebellift-buchen" 
+                      target="_blank" 
+                      rel="noopener"
+                      className="h-11 inline-flex items-center justify-center rounded-full px-5 py-2 bg-movers-light text-movers-primary font-medium hover:bg-movers-light/80 transition-colors"
+                    >
+                      Piaggio gross
+                    </a>
+                    <a 
+                      href="https://calendly.com/moebelhoch/moebelhoch-piaggo-klein" 
+                      target="_blank" 
+                      rel="noopener"
+                      className="h-11 inline-flex items-center justify-center rounded-full px-5 py-2 bg-movers-light text-movers-primary font-medium hover:bg-movers-light/80 transition-colors"
+                    >
+                      Piaggio klein
+                    </a>
+                  </div>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-bold text-movers-primary mb-4">Service-Erstgespräche</h3>
+                  <div className="flex flex-wrap gap-4">
+                    <a 
+                      href="https://calendly.com/moebelhoch/umzug-planung-telefon" 
+                      target="_blank" 
+                      rel="noopener"
+                      className="h-11 inline-flex items-center justify-center rounded-full px-5 py-2 bg-movers-light text-movers-primary font-medium hover:bg-movers-light/80 transition-colors"
+                    >
+                      Umzug
+                    </a>
+                    <a 
+                      href="https://calendly.com/moebelhoch/raeumung-entsorgung-telefon" 
+                      target="_blank" 
+                      rel="noopener"
+                      className="h-11 inline-flex items-center justify-center rounded-full px-5 py-2 bg-movers-light text-movers-primary font-medium hover:bg-movers-light/80 transition-colors"
+                    >
+                      Räumung
+                    </a>
+                    <a 
+                      href="https://calendly.com/moebelhoch/endreinigung-telefon" 
+                      target="_blank" 
+                      rel="noopener"
+                      className="h-11 inline-flex items-center justify-center rounded-full px-5 py-2 bg-movers-light text-movers-primary font-medium hover:bg-movers-light/80 transition-colors"
+                    >
+                      Endreinigung
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <p className="text-center text-sm text-gray-500 mt-4">
+                100 % unverbindlich – jederzeit stornierbar
+              </p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto hidden" id="kontaktformular">
               <ContactForm title="Kontaktformular" description="Für eine unverbindliche Offerte bitten wir Sie, folgende Angaben auszufüllen. Wir werden uns schnellstmöglich bei Ihnen melden." fields={formFields} submitButtonText="Offerte anfordern" emailTo="info@moebellift.ch" />
             </div>
           </div>
