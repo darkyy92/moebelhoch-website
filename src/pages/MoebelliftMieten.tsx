@@ -71,45 +71,59 @@ const MoebelliftMieten = () => {
 
   return <>
       <Navbar />
-      <main className="pt-20">
-        <section className="py-16 md:py-24 bg-movers-light">
+      <main className="pt-0">
+        <section className="py-20 md:py-28 bg-movers-primary">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-4xl font-bold text-movers-primary mb-6">Möbellift mieten</h1>
-                <p className="text-lg text-gray-600 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="text-white animate-fade-in-up">
+                <div className="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-sm mb-4">
+                  <span className="text-sm font-medium">Professioneller Service</span>
+                </div>
+                <h1 className="text-5xl font-bold mb-6 leading-tight">Möbellift mieten</h1>
+                <p className="text-xl mb-8 text-gray-100">
                   Wir verfügen über drei verschiedene Möbellift-Modelle, die sich je nach Art und Ort des Einsatzes anbieten. 
                   Mit unseren Möbelliften transportieren Sie Ihre Möbel schnell, sicher und ohne Schäden am Treppenhaus zu riskieren.
                 </p>
-                <a href="javascript:void(0)" onClick={(e) => { e.preventDefault(); document.querySelector('#moebellift-section').scrollIntoView({behavior: 'smooth'}); }}  className="btn-primary">
+                <a href="javascript:void(0)" onClick={(e) => { e.preventDefault(); document.querySelector('#moebellift-section').scrollIntoView({behavior: 'smooth'}); }} className="bg-white text-movers-primary hover:bg-movers-yellow hover:text-white font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center shadow-lg group">
                   Möbellift auswählen
-                  <ArrowRight size={18} />
+                  <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
-              <div>
-                <img 
-                  alt="Möbellift im Einsatz" 
-                  className="w-full h-auto rounded-lg shadow-lg" 
-                  src="/images/moebellifte/piaggo-gross/piaggo-gross1.webp" 
-                />
+              <div className="relative z-10 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
+                <div className="relative p-3 bg-white rounded-2xl shadow-xl rotate-1 transform transition-transform hover:rotate-0 duration-500">
+                  <div className="overflow-hidden rounded-xl">
+                    <img 
+                      alt="Möbellift im Einsatz" 
+                      className="w-full h-auto transform hover:scale-105 transition-transform duration-700" 
+                      src="/images/moebellifte/piaggo-gross/piaggo-gross1.webp" 
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="py-16 md:py-24">
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4">
-            <h2 className="section-title text-center mb-12">Technische Angaben</h2>
-            <div className="max-w-5xl mx-auto">
-              <p className="text-gray-600 mb-8">
+            <div className="max-w-lg mx-auto text-center mb-16 animate-fade-in-up">
+              <div className="inline-block px-4 py-1 rounded-full bg-movers-light text-movers-primary mb-4">
+                <span className="text-sm font-medium">Technische Details</span>
+              </div>
+              <h2 className="text-4xl font-bold text-movers-primary mb-6">Technische Angaben</h2>
+              <p className="text-lg text-gray-600">
                 Detaillierte technische Informationen zu unseren drei Objekten finden Sie untenstehend:
               </p>
-              
+            </div>
+            
+            <div className="max-w-5xl mx-auto animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               <TechnicalData specs={specs} />
               
-              <p className="text-gray-600 mt-6">
-                Sowohl der Auf- und Abbau des Möbellifts sowie der Betrieb werden von einem unserer Operateure vor Ort sichergestellt.
-              </p>
+              <div className="bg-movers-light rounded-lg p-6 mt-10 shadow-inner">
+                <p className="text-gray-700 italic text-center">
+                  Sowohl der Auf- und Abbau des Möbellifts sowie der Betrieb werden von einem unserer Operateure vor Ort sichergestellt.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -118,32 +132,44 @@ const MoebelliftMieten = () => {
           <UnsereMoebellifte />
         </div>
 
-        <section className="py-16 md:py-24">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="section-title text-center mb-12">Vorgehen und Sicherheit</h2>
+            <div className="max-w-lg mx-auto text-center mb-16 animate-fade-in-up">
+              <div className="inline-block px-4 py-1 rounded-full bg-movers-light text-movers-primary mb-4">
+                <span className="text-sm font-medium">Prozess</span>
+              </div>
+              <h2 className="text-4xl font-bold text-movers-primary mb-6">Vorgehen und Sicherheit</h2>
+              <p className="text-lg text-gray-600">
+                Ein strukturierter Prozess sorgt für optimale Sicherheit und Effizienz:
+              </p>
+            </div>
             
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="p-8">
-                  <div className="space-y-6">
-                    {securitySteps.map((step, index) => <div key={index} className="flex">
+            <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+              <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100 transform transition-all hover:shadow-2xl duration-300">
+                <div className="p-8 md:p-10">
+                  <div className="space-y-8">
+                    {securitySteps.map((step, index) => (
+                      <div key={index} className="flex group">
                         <div className="flex-shrink-0">
-                          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-movers-light text-movers-primary font-bold">
+                          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-movers-primary text-white font-bold text-lg shadow-md group-hover:scale-110 transition-transform duration-300">
                             {index + 1}
                           </div>
                         </div>
-                        <div className="ml-4">
-                          <p className="text-gray-700">{step}</p>
+                        <div className="ml-6">
+                          <p className="text-gray-700 text-lg">{step}</p>
                         </div>
-                      </div>)}
-                    <div className="pt-4">
-                      <p className="text-gray-700 font-medium">
-                        Die Bedienung unserer beiden Piaggio Möbellifte erfolgt von einem unserer Operateure.<br />
-                        Den Baulift können Sie nach einer Schulung durch uns auch gerne selbst bedienen.
-                      </p>
-                      <p className="text-gray-700 mt-4">
-                        Bedenken Sie, dass je nach Einsatzort eine (teilweise) Strassensperrung durch die lokalen Behörden notwendig ist.
-                      </p>
+                      </div>
+                    ))}
+                    <div className="pt-6 mt-6 border-t border-dashed border-gray-200">
+                      <div className="p-6 bg-movers-light rounded-lg">
+                        <p className="text-gray-700 font-medium">
+                          Die Bedienung unserer beiden Piaggio Möbellifte erfolgt von einem unserer Operateure.<br />
+                          Den Baulift können Sie nach einer Schulung durch uns auch gerne selbst bedienen.
+                        </p>
+                        <p className="text-gray-700 mt-4 font-medium">
+                          Bedenken Sie, dass je nach Einsatzort eine (teilweise) Strassensperrung durch die lokalen Behörden notwendig ist.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -152,16 +178,25 @@ const MoebelliftMieten = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-movers-primary text-white">
+        <section className="py-20 md:py-28 bg-movers-primary text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Bereit, einen Möbellift zu mieten?</h2>
-            <p className="text-lg text-gray-200 max-w-2xl mx-auto mb-10">
-              Kontaktieren Sie uns noch heute und erfahren Sie, wie wir Ihnen mit unserem Möbellift-Service helfen können.
-            </p>
-            <a href="javascript:void(0)" onClick={(e) => { e.preventDefault(); document.querySelector('#moebellift-section').scrollIntoView({behavior: 'smooth'}); }} className="bg-white text-movers-primary hover:bg-movers-yellow font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center">
-              Möbellift auswählen
-              <ArrowRight size={18} className="ml-2" />
-            </a>
+            <div className="max-w-3xl mx-auto animate-fade-in-up">
+              <div className="inline-block bg-white/20 text-white font-medium rounded-full py-1 px-4 mb-6">
+                Jetzt starten
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">Bereit, einen Möbellift zu mieten?</h2>
+              <p className="text-xl text-gray-100 mb-10">
+                Kontaktieren Sie uns noch heute und erfahren Sie, wie wir Ihnen mit unserem Möbellift-Service helfen können.
+              </p>
+              <a 
+                href="javascript:void(0)" 
+                onClick={(e) => { e.preventDefault(); document.querySelector('#moebellift-section').scrollIntoView({behavior: 'smooth'}); }} 
+                className="bg-white text-movers-primary hover:bg-movers-yellow hover:text-white font-medium py-4 px-10 rounded-md transition-all duration-300 inline-flex items-center shadow-lg text-lg group"
+              >
+                Möbellift auswählen
+                <ArrowRight size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
           </div>
         </section>
       </main>

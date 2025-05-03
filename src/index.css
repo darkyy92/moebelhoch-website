@@ -81,6 +81,16 @@
   .transition-all-300 {
     @apply transition-all duration-300 ease-in-out;
   }
+  
+  /* Add smooth scrolling to the whole page */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Add focus styles for accessibility */
+  :focus-visible {
+    @apply outline-movers-primary outline-2 outline-offset-2;
+  }
 }
 
 .hero-section {
@@ -126,15 +136,15 @@
 }
 
 .section-padding {
-  @apply py-16 md:py-24;
+  @apply py-20 md:py-28;
 }
 
 table.technical-specs {
-  @apply w-full border-collapse mb-8;
+  @apply w-full border-collapse mb-8 shadow-xl rounded-xl overflow-hidden;
 }
 
 table.technical-specs th {
-  @apply bg-movers-primary text-white font-semibold p-3 text-left;
+  @apply bg-gradient-to-r from-movers-primary to-movers-secondary text-white font-semibold p-5 text-left;
 }
 
 table.technical-specs tr:nth-child(odd) td {
@@ -146,23 +156,18 @@ table.technical-specs tr:nth-child(even) td {
 }
 
 table.technical-specs td {
-  @apply p-3 border-b border-gray-200;
+  @apply p-5 border-b border-gray-200;
 }
 
 .service-card {
-  @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300;
+  @apply bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300;
 }
 
 .service-card:hover {
-  @apply shadow-xl transform -translate-y-1;
+  @apply shadow-2xl transform -translate-y-1;
 }
 
-@media (prefers-reduced-motion) {
-  .service-card:hover {
-    @apply transform-none;
-  }
-}
-
+/* Enhanced animations */
 @keyframes pulse-fade {
   0%, 100% { opacity: 0.8; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.05); }
@@ -174,10 +179,71 @@ table.technical-specs td {
   100% { transform: translateX(-10px); opacity: 0.3; }
 }
 
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .animate-pulse-fade {
   animation: pulse-fade 2s ease-in-out infinite;
 }
 
 .animate-slide-x {
   animation: slide-x 1.5s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out forwards;
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 10s linear infinite;
+}
+
+/* Add reveal classes that will be triggered with JavaScript */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add responsive enhancements */
+@media (prefers-reduced-motion) {
+  .service-card:hover,
+  .animate-pulse-fade,
+  .animate-slide-x,
+  .animate-fade-in-up,
+  .animate-bounce-subtle,
+  .animate-rotate-slow,
+  .reveal,
+  html {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
 }

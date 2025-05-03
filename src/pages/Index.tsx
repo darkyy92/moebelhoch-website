@@ -30,7 +30,7 @@ const Index = () => {
   }];
   return <>
       <Navbar />
-      <main>
+      <main className="pt-0">
         <HeroSection 
           title="Möbellift mieten – schnell, sicher & günstig umziehen" 
           subtitle="Vom sozialen Brockenhaus EMMAUS Zürich – zuverlässig & fair seit 1956" 
@@ -43,9 +43,14 @@ const Index = () => {
           trustNote="Hunderte erfolgreiche Umzüge in Zürich – auch kurzfristig verfügbar"
         />
 
-        <section className="py-16 md:py-24 bg-gray-50">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in-up">
+              <div className="flex justify-center mb-4">
+                <div className="inline-block bg-movers-primary/10 text-movers-primary font-medium rounded-full py-1 px-4">
+                  Umfassender Service
+                </div>
+              </div>
               <h2 className="section-title">Unsere Dienstleistungen</h2>
               <p className="text-gray-600 text-lg">
                 Entdecken Sie unsere vielfältigen Dienstleistungen rund um Umzug, Transport und Entsorgung. 
@@ -54,15 +59,27 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} link={service.link} />)}
+              {services.map((service, index) => (
+                <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
+                  <ServiceCard 
+                    title={service.title} 
+                    description={service.description} 
+                    icon={service.icon} 
+                    link={service.link} 
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
         
-        <section className="py-16 md:py-24">
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="animate-fade-in-up">
+                <div className="inline-block bg-movers-primary/10 text-movers-primary font-medium rounded-full py-1 px-4 mb-4">
+                  Über EMMAUS Zürich
+                </div>
                 <h2 className="section-title">Wer wir sind</h2>
                 <p className="text-gray-600 mb-6">
                   Das 1956 von Abbé Pierre gegründete Brockenhaus EMMAUS Zürich mit Sitz in Dübendorf unterstützt seit Anbeginn Hilfsprojekte im In- und Ausland.
@@ -73,14 +90,14 @@ const Index = () => {
                 <p className="text-gray-600 mb-8">
                   Für eine noch effizientere Durchführung von Räumungen und Umzügen setzen wir auf drei eigene Möbellifte: den Piaggio klein für enge Zufahrten, den Piaggio gross für grössere Einsätze sowie einen Baulift für schwer zugängliche Orte. Diese stehen auch zur Vermietung bereit – als flexible Umzugshelfer, ganz nach Bedarf.
                 </p>
-                <Link to="/ueber-uns" className="btn-primary">
+                <Link to="/ueber-uns" className="btn-primary inline-flex items-center group">
                   Mehr über uns
-                  <ArrowRight size={18} />
+                  <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
-              <div className="relative">
-                <img alt="EMMAUS Brockenhaus" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/fbecb47f-92e6-4c15-8700-732308c2617b.png" />
-                <div className="absolute -bottom-6 -left-6 bg-movers-primary text-white p-6 rounded-lg shadow-lg max-w-xs hidden md:block">
+              <div className="relative animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+                <img alt="EMMAUS Brockenhaus" className="w-full h-auto rounded-2xl shadow-xl" src="/lovable-uploads/fbecb47f-92e6-4c15-8700-732308c2617b.png" />
+                <div className="absolute -bottom-6 -left-6 bg-movers-primary text-white p-6 rounded-xl shadow-xl max-w-xs hidden md:block transform transition-transform hover:scale-105 duration-300">
                   <p className="font-semibold text-lg mb-1">Soziales Engagement</p>
                   <p className="text-sm">Der erwirtschaftete Erlös unterstützt jedes Jahr lokale, nationale und internationale Projekte.</p>
                 </div>
@@ -91,47 +108,50 @@ const Index = () => {
 
         <UnsereMoebellifte />
 
-        <section className="py-16 md:py-24">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="order-2 md:order-1">
-                  <img alt="Möbelliftservice" className="w-full h-auto rounded-lg shadow-lg" src="/lovable-uploads/2c339d7f-c50e-4886-95c1-515c8d0c4b62.png" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div className="order-2 md:order-1 animate-fade-in-up">
+                  <img alt="Möbelliftservice" className="w-full h-auto rounded-2xl shadow-xl" src="/lovable-uploads/2c339d7f-c50e-4886-95c1-515c8d0c4b62.png" />
                 </div>
-                <div className="order-1 md:order-2">
+                <div className="order-1 md:order-2 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
+                  <div className="inline-block bg-movers-primary/10 text-movers-primary font-medium rounded-full py-1 px-4 mb-4">
+                    Ihre Vorteile
+                  </div>
                   <h2 className="section-title">Warum unseren Möbellift-Service wählen?</h2>
-                  <ul className="space-y-4 mb-8">
-                    <li className="flex items-start">
-                      <div className="flex-shrink-0 w-8 h-8 bg-movers-light rounded-full flex items-center justify-center mr-3 mt-1">
-                        <Star size={18} className="text-movers-secondary" />
+                  <ul className="space-y-6 mb-8">
+                    <li className="flex items-start group">
+                      <div className="flex-shrink-0 w-10 h-10 bg-movers-light rounded-full flex items-center justify-center mr-4 mt-1 group-hover:bg-movers-primary group-hover:text-white transition-colors duration-300">
+                        <Star size={20} className="text-movers-secondary group-hover:text-white transition-colors duration-300" />
                       </div>
                       <div>
-                        <p className="font-semibold text-lg text-movers-primary">Professionelle Bedienung</p>
+                        <p className="font-semibold text-lg text-movers-primary mb-1">Professionelle Bedienung</p>
                         <p className="text-gray-600">Unsere geschulten Operateure garantieren einen sicheren und effizienten Einsatz.</p>
                       </div>
                     </li>
-                    <li className="flex items-start">
-                      <div className="flex-shrink-0 w-8 h-8 bg-movers-light rounded-full flex items-center justify-center mr-3 mt-1">
-                        <Star size={18} className="text-movers-secondary" />
+                    <li className="flex items-start group">
+                      <div className="flex-shrink-0 w-10 h-10 bg-movers-light rounded-full flex items-center justify-center mr-4 mt-1 group-hover:bg-movers-primary group-hover:text-white transition-colors duration-300">
+                        <Star size={20} className="text-movers-secondary group-hover:text-white transition-colors duration-300" />
                       </div>
                       <div>
-                        <p className="font-semibold text-lg text-movers-primary">Transparente Preisstruktur</p>
+                        <p className="font-semibold text-lg text-movers-primary mb-1">Transparente Preisstruktur</p>
                         <p className="text-gray-600">Faire Pauschalpreise ohne versteckte Kosten für unsere Möbellift-Modelle.</p>
                       </div>
                     </li>
-                    <li className="flex items-start">
-                      <div className="flex-shrink-0 w-8 h-8 bg-movers-light rounded-full flex items-center justify-center mr-3 mt-1">
-                        <Star size={18} className="text-movers-secondary" />
+                    <li className="flex items-start group">
+                      <div className="flex-shrink-0 w-10 h-10 bg-movers-light rounded-full flex items-center justify-center mr-4 mt-1 group-hover:bg-movers-primary group-hover:text-white transition-colors duration-300">
+                        <Star size={20} className="text-movers-secondary group-hover:text-white transition-colors duration-300" />
                       </div>
                       <div>
-                        <p className="font-semibold text-lg text-movers-primary">Soziales Engagement</p>
+                        <p className="font-semibold text-lg text-movers-primary mb-1">Soziales Engagement</p>
                         <p className="text-gray-600">Ihr Auftrag unterstützt gleichzeitig wohltätige Projekte von EMMAUS Zürich.</p>
                       </div>
                     </li>
                   </ul>
-                  <Link to="/offerten-anfordern" className="btn-primary">
+                  <Link to="/offerten-anfordern" className="btn-primary inline-flex items-center group">
                     Jetzt Offerte anfordern
-                    <ArrowRight size={18} />
+                    <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
@@ -139,20 +159,25 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-movers-primary text-white">
+        <section className="py-20 md:py-28 bg-movers-primary text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Bereit für Ihren stressfreien Umzug?</h2>
-            <p className="text-lg text-gray-200 max-w-2xl mx-auto mb-10">
-              Kontaktieren Sie uns noch heute und erfahren Sie, wie wir Ihnen mit unserem Möbellift-Service und weiteren Dienstleistungen helfen können.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/offerten-anfordern" className="bg-white text-movers-primary hover:bg-movers-yellow font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center">
-                Offerte anfordern
-                <ArrowRight size={18} className="ml-2" />
-              </Link>
-              <Link to="/moebellift-mieten" className="bg-transparent border-2 border-white hover:bg-white text-white hover:text-movers-primary font-medium py-3 px-8 rounded-md transition-all duration-300 inline-flex items-center">
-                Mehr über unsere Möbellifte
-              </Link>
+            <div className="animate-fade-in-up max-w-4xl mx-auto">
+              <div className="inline-block bg-white/20 text-white font-medium rounded-full py-1 px-4 mb-6">
+                Jetzt loslegen
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Bereit für Ihren stressfreien Umzug?</h2>
+              <p className="text-lg text-gray-200 max-w-2xl mx-auto mb-10">
+                Kontaktieren Sie uns noch heute und erfahren Sie, wie wir Ihnen mit unserem Möbellift-Service und weiteren Dienstleistungen helfen können.
+              </p>
+              <div className="flex flex-wrap justify-center gap-6">
+                <Link to="/offerten-anfordern" className="bg-white text-movers-primary hover:bg-movers-yellow font-medium py-3.5 px-8 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center group">
+                  Offerte anfordern
+                  <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <Link to="/moebellift-mieten" className="bg-transparent border-2 border-white hover:bg-white/10 text-white hover:text-movers-yellow font-medium py-3.5 px-8 rounded-md transition-all duration-300 inline-flex items-center">
+                  Mehr über unsere Möbellifte
+                </Link>
+              </div>
             </div>
           </div>
         </section>

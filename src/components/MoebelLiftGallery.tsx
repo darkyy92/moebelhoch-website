@@ -98,17 +98,20 @@ const MoebelLiftGallery = ({ images, className }: MoebelLiftGalleryProps) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute inset-0 flex items-center justify-between px-4 pointer-events-none">
-          <CarouselPrevious 
-            className="hidden md:flex opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-white/90 hover:bg-white text-movers-primary hover:text-movers-primary border-none shadow-lg pointer-events-auto" 
-            variant="outline"
-            size="icon"
-          />
-          <CarouselNext 
-            className="hidden md:flex opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-white/90 hover:bg-white text-movers-primary hover:text-movers-primary border-none shadow-lg pointer-events-auto"
-            variant="outline"
-            size="icon"
-          />
+        {/* Custom controls - absolute positioned at exactly the same height */}
+        <div className="hidden md:block">
+          <button 
+            onClick={() => api?.prev()}
+            className="absolute left-4 top-[calc(50%-18px)] z-10 h-9 w-9 rounded-full flex items-center justify-center bg-white/90 hover:bg-white text-movers-primary border-none shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-auto"
+          >
+            <ArrowLeft className="h-4 w-4" />
+          </button>
+          <button 
+            onClick={() => api?.next()}
+            className="absolute right-4 top-[calc(50%-18px)] z-10 h-9 w-9 rounded-full flex items-center justify-center bg-white/90 hover:bg-white text-movers-primary border-none shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-auto"
+          >
+            <ArrowRight className="h-4 w-4" />
+          </button>
         </div>
         {isMobile && !hasInteracted && api && (
           <SwipeOverlay 
