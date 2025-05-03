@@ -1,61 +1,42 @@
-# Welcome to your project
+# MöbelHoch Website
 
-## Project info
+## Über das Projekt
 
-**URL**: <YOUR_PROJECT_URL>
+Die offizielle Website für MöbelHoch - Möbellift-Vermietung und Umzugsdienstleistungen in Zürich.
 
-## How can I edit this code?
+**Website**: https://www.moebelhoch.ch
 
-There are several ways of editing your application.
+## Technologie-Stack
 
-**Use your preferred IDE**
+Diese Website nutzt folgende Technologien:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes.
+- Vite (Build-Tool)
+- TypeScript
+- React
+- shadcn/ui (UI-Komponenten-Bibliothek)
+- Tailwind CSS (Styling)
+- Calendly-Integration (Buchungssystem)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Lokale Entwicklung
 
-Follow these steps:
+Um das Projekt lokal zu entwickeln, benötigst du Node.js & npm. Am besten installierst du diese mit [nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+Folge diesen Schritten:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Schritt 1: Repository klonen
+git clone https://github.com/yourusername/moebelhoch-website.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Schritt 2: In das Projektverzeichnis wechseln
+cd moebelhoch-website
 
-# Step 3: Install the necessary dependencies.
+# Schritt 3: Abhängigkeiten installieren
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Schritt 4: Entwicklungsserver starten
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.netlify.com/domains-and-dns/custom-domains/)
+Das Projekt wird über GitHub Actions auf dem Webserver deployt. Bei jedem Push in den main-Branch wird automatisch ein neues Build erstellt und veröffentlicht.
