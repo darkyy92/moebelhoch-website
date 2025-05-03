@@ -27,9 +27,9 @@ export const CookieSettingsModal = ({
   onSave 
 }: CookieSettingsModalProps) => {
   const [preferences, setPreferences] = useState<CookiePreferences>({
-    essential: true, // Always on
-    analytics: true, // Default on
-    marketing: false, // Default off
+    essential: true, // Always on (required)
+    analytics: true, // Default on (allowed with notice)
+    marketing: false, // Default off (explicit opt-in required by Swiss law)
   });
 
   useEffect(() => {

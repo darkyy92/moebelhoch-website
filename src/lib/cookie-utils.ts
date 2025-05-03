@@ -2,9 +2,9 @@ import { CookiePreferences } from '@/components/CookieNotice';
 
 // Default cookie preferences
 export const DEFAULT_COOKIE_PREFERENCES: CookiePreferences = {
-  essential: true, // Always true
-  analytics: true, // Default on
-  marketing: false, // Default off
+  essential: true, // Always true (required)
+  analytics: true, // Default on (allowed with notice)
+  marketing: false, // Default off (explicit opt-in required by Swiss law)
 };
 
 // Check if cookie notice has been accepted

@@ -25,7 +25,7 @@ export const CookieNotice = () => {
     const preferences: CookiePreferences = {
       essential: true,
       analytics: true,
-      marketing: false,
+      marketing: false, // Marketing cookies must be opt-in by Swiss law
     };
     
     localStorage.setItem('mh_cookie_notice_accepted', 'true');

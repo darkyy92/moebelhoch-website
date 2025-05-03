@@ -4,7 +4,9 @@
 - Compliance with Swiss nDSG (neues Datenschutzgesetz)
 - EDÖB guidelines from February 2025
 - Required cookie categories: Essenziell, Analyse, Marketing
-- Opt-in for non-essential cookies (Analyse, Marketing)
+- Opt-in for Marketing cookies (explicit consent required)
+- Analytical cookies allowed with clear notice
+- Essential cookies always enabled
 - Transparent information about cookie usage
 
 ## 2. UX Specifications

@@ -20,9 +20,9 @@ import { CookiePreferences } from './CookieNotice';
 export const CookieSettings = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [preferences, setPreferences] = useState<CookiePreferences>({
-    essential: true,
-    analytics: true,
-    marketing: false,
+    essential: true, // Always on (required)
+    analytics: true, // Default on (allowed with notice)
+    marketing: false, // Default off (explicit opt-in required by Swiss law)
   });
 
   useEffect(() => {
