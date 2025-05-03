@@ -2,76 +2,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ArrowRight, Check, Trash2, Recycle, Store } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import ContactForm from '../components/ContactForm';
+
 const Raeumung = () => {
-  const formFields = [{
-    id: "name",
-    label: "Name / Vorname",
-    type: "text",
-    placeholder: "Ihr vollständiger Name",
-    required: true
-  }, {
-    id: "address",
-    label: "Adresse",
-    type: "text",
-    placeholder: "Ihre aktuelle Strasse und Hausnummer",
-    required: true
-  }, {
-    id: "plz",
-    label: "PLZ / Ort",
-    type: "text",
-    placeholder: "Postleitzahl und Ort",
-    required: true
-  }, {
-    id: "phone",
-    label: "Telefon",
-    type: "tel",
-    placeholder: "Ihre Telefonnummer für Rückfragen",
-    required: true
-  }, {
-    id: "email",
-    label: "E-Mail",
-    type: "email",
-    placeholder: "Ihre E-Mail-Adresse",
-    required: true
-  }, {
-    id: "clearingAddress",
-    label: "Adresse der zu räumenden Räumlichkeit",
-    type: "text",
-    placeholder: "Adresse",
-    required: true
-  }, {
-    id: "rooms",
-    label: "Anzahl Zimmer",
-    type: "text",
-    placeholder: "z.B. 3.5",
-    required: true
-  }, {
-    id: "floor",
-    label: "Stockwerk",
-    type: "text",
-    placeholder: "z.B. 2. OG",
-    required: true
-  }, {
-    id: "date",
-    label: "Gewünschtes Datum",
-    type: "date",
-    placeholder: "",
-    required: true
-  }, {
-    id: "items",
-    label: "Zu entsorgende Gegenstände (mit Fotos falls möglich)",
-    type: "textarea",
-    placeholder: "Beschreiben Sie kurz, welche Gegenstände entsorgt werden sollen",
-    rows: 4,
-    required: true
-  }, {
-    id: "notes",
-    label: "Wichtige Bemerkungen",
-    type: "textarea",
-    placeholder: "Weitere wichtige Informationen",
-    rows: 3
-  }];
   return <>
       <Navbar />
       <main className="pt-20">
@@ -168,29 +100,19 @@ const Raeumung = () => {
                 </ul>
                 
                 <p className="text-gray-700">
-                  Gerne können Sie entweder direkt mit unseren beiden Partnern EMMAUS Zürich oder Basha's GmbH Kontakt aufnehmen oder Sie fragen unverzüglich direkt hier nach einer unverbindlichen Offerte.
+                  Gerne können Sie direkt mit unserem Partner EMMAUS Zürich Kontakt aufnehmen oder über uns eine unverbindliche Offerte anfragen.
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 gap-8">
                 <div className="bg-white rounded-lg shadow-md p-6">
                   <h3 className="text-xl font-bold text-movers-primary mb-4">EMMAUS Zürich</h3>
                   <p className="text-gray-600 mb-6">
                     Gemeinnütziges Brockenhaus, das Hilfsprojekte unterstützt und gebrauchte Möbel annimmt.
                   </p>
-                  <Link to="/offerten-anfordern" className="btn-outline w-full justify-center">
-                    Kontakt aufnehmen
-                  </Link>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-md p-6">
-                  <h3 className="text-xl font-bold text-movers-primary mb-4">Basha's GmbH</h3>
-                  <p className="text-gray-600 mb-6">
-                    Professioneller Räumungs- und Entsorgungsdienst mit modernem Equipment.
-                  </p>
-                  <Link to="/offerten-anfordern" className="btn-outline w-full justify-center">
-                    Kontakt aufnehmen
-                  </Link>
+                  <a href="https://www.emmaus.ch" target="_blank" rel="noopener noreferrer" className="btn-outline w-full justify-center">
+                    Webseite besuchen
+                  </a>
                 </div>
               </div>
             </div>
@@ -200,9 +122,39 @@ const Raeumung = () => {
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="section-title text-center mb-12">Räumungsofferte anfordern</h2>
-              
-              <ContactForm title="Räumung planen" description="Für eine unverbindliche Offerte für Ihre Räumung bitten wir Sie, folgende Angaben auszufüllen." fields={formFields} submitButtonText="Räumungsofferte anfordern" emailTo="info@moebellift.ch" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-movers-primary mb-4">Bereit für Ihre Räumung?</h2>
+                  <p className="text-gray-600 mb-6">
+                    Kontaktieren Sie uns für eine unverbindliche Beratung und erhalten Sie eine massgeschneiderte Offerte für Ihre individuellen Räumungsbedürfnisse.
+                  </p>
+                  <Link to="/offerten-anfordern" className="btn-primary inline-flex items-center">
+                    Gratis Offerte anfordern
+                    <ArrowRight size={18} className="ml-2" />
+                  </Link>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-movers-primary mb-4">Unsere Räumungsdienste umfassen:</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Check size={20} className="text-movers-secondary mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Komplette Wohnungs- und Hausräumungen</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check size={20} className="text-movers-secondary mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Fachgerechte Entsorgung von Sperrmüll und Sondermüll</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check size={20} className="text-movers-secondary mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Transport von Möbeln zu Ihrer neuen Adresse</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check size={20} className="text-movers-secondary mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Professionelle Beratung und transparente Preise</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
