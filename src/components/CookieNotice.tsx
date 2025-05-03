@@ -81,7 +81,7 @@ export const CookieNotice = () => {
             variant="secondary" 
             size="sm" 
             onClick={handleOpenSettings}
-            className="w-full sm:w-auto whitespace-nowrap"
+            className="w-full sm:w-auto whitespace-nowrap text-white"
           >
             Einstellungen
           </Button>
