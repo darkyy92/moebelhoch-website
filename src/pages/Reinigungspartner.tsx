@@ -3,7 +3,84 @@ import Footer from '../components/Footer';
 import { ArrowRight, Check, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
+import { useEffect } from 'react';
 const Reinigungspartner = () => {
+  // Add structured data for Service and BreadcrumbList
+  useEffect(() => {
+    const serviceSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Endreinigung und Reinigungsservice in Zürich",
+      "description": "Professionelle Endreinigung für Wohnungsübergaben mit Abnahmegarantie. In Zusammenarbeit mit zuverlässigen Reinigungspartnern für makellose Ergebnisse.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "MöbelHoch - EMMAUS Zürich",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Ringwiesenstrasse 171",
+          "addressLocality": "Dübendorf",
+          "postalCode": "8600",
+          "addressCountry": "CH"
+        }
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 47.3769,
+          "longitude": 8.5417
+        },
+        "geoRadius": "50000"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "CHF"
+        }
+      },
+      "serviceType": "Reinigungsservice",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.moebelhoch.ch/reinigungspartner",
+        "servicePhone": "+41 43 422 00 91"
+      }
+    };
+    
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.moebelhoch.ch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Endreinigung",
+          "item": "https://www.moebelhoch.ch/reinigungspartner"
+        }
+      ]
+    };
+
+    const serviceScript = document.createElement('script');
+    serviceScript.type = 'application/ld+json';
+    serviceScript.textContent = JSON.stringify(serviceSchema);
+    document.head.appendChild(serviceScript);
+    
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+    document.head.appendChild(breadcrumbScript);
+
+    return () => {
+      document.head.removeChild(serviceScript);
+      document.head.removeChild(breadcrumbScript);
+    };
+  }, []);
   const formFields = [{
     id: "name",
     label: "Name / Vorname",

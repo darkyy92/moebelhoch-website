@@ -7,6 +7,8 @@ interface ResponsiveImageProps extends React.ImgHTMLAttributes<HTMLImageElement>
   alt: string;
   sizes?: string;
   className?: string;
+  width?: number;
+  height?: number;
 }
 
 const ResponsiveImage = ({
@@ -14,6 +16,8 @@ const ResponsiveImage = ({
   alt,
   sizes = "100vw",
   className,
+  width,
+  height,
   ...props
 }: ResponsiveImageProps) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +32,8 @@ const ResponsiveImage = ({
         src={src}
         alt={alt}
         sizes={sizes}
+        width={width}
+        height={height}
         className={cn(
           "w-full h-full object-cover transition-opacity duration-300",
           isLoading ? "opacity-0" : "opacity-100",

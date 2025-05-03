@@ -100,10 +100,10 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div className={`lg:hidden ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out bg-white`}>
-        <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <div className="container mx-auto px-4 py-6 pt-8 flex flex-col space-y-6">
           {navLinks.map(link => <NavLink key={link.path} to={link.path} onClick={() => setIsOpen(false)} className={({
           isActive
-        }) => `py-2 text-base font-medium ${isActive ? 'text-movers-secondary' : 'text-movers-primary'}`}>
+        }) => `py-3 text-base font-medium ${isActive ? 'text-movers-secondary' : 'text-movers-primary'}`}>
               {link.name}
             </NavLink>)}
           

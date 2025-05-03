@@ -5,8 +5,66 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ServiceCard from '../components/ServiceCard';
 import UnsereMoebellifte from '../components/UnsereMoebellifte';
+import { useEffect } from 'react';
 
 const Index = () => {
+  // Inject schema.org structured data
+  useEffect(() => {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "MöbelHoch - EMMAUS Zürich",
+      "description": "Möbellift-Vermietung und Umzugsservice in Zürich - vom sozialen Brockenhaus EMMAUS Zürich",
+      "url": "https://www.moebelhoch.ch/",
+      "telephone": "+41 43 422 00 91",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ringwiesenstrasse 171",
+        "addressLocality": "Dübendorf",
+        "postalCode": "8600",
+        "addressCountry": "CH"
+      },
+      "image": "https://www.moebelhoch.ch/lovable-uploads/9b6af9e7-6ebe-410a-a153-bd1a7e9253ea.png",
+      "priceRange": "CHF",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Möbellift-Service",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Kleiner Piaggio Möbellift",
+            "description": "Für enge Zufahrten, Hubhöhe bis 21 Meter",
+            "price": "380.00",
+            "priceCurrency": "CHF"
+          },
+          {
+            "@type": "Offer",
+            "name": "Grosser Piaggio Möbellift",
+            "description": "Für größere Einsätze, Hubhöhe bis 30 Meter",
+            "price": "450.00",
+            "priceCurrency": "CHF"
+          },
+          {
+            "@type": "Offer",
+            "name": "Baulift",
+            "description": "Für schwer zugängliche Orte",
+            "price": "700.00",
+            "priceCurrency": "CHF"
+          }
+        ]
+      }
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schemaData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const services = [{
     title: "Möbellift mieten",
     description: "Wir verfügen über drei verschiedene Möbellift-Modelle, die je nach Art und Ort des Einsatzes optimal sind.",

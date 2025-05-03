@@ -4,8 +4,87 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TechnicalData from '../components/TechnicalData';
 import UnsereMoebellifte from '../components/UnsereMoebellifte';
+import { useEffect } from 'react';
 
 const MoebelliftMieten = () => {
+  // Add structured data for breadcrumbs and product
+  useEffect(() => {
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.moebelhoch.ch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Möbellift mieten",
+          "item": "https://www.moebelhoch.ch/moebellift-mieten"
+        }
+      ]
+    };
+    
+    const productSchema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Möbellift Vermietung",
+      "description": "Drei verschiedene Möbellift-Modelle für schnellen, sicheren Transport ohne Schäden am Treppenhaus.",
+      "brand": {
+        "@type": "Brand",
+        "name": "MöbelHoch - EMMAUS Zürich"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "380",
+        "highPrice": "700",
+        "priceCurrency": "CHF",
+        "offerCount": 3,
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Kleiner Piaggio Möbellift",
+            "price": "380",
+            "priceCurrency": "CHF",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Grosser Piaggio Möbellift",
+            "price": "450",
+            "priceCurrency": "CHF",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Baulift",
+            "price": "700",
+            "priceCurrency": "CHF",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "image": "https://www.moebelhoch.ch/images/moebellifte/piaggo-gross/piaggo-gross1.webp"
+    };
+
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+    document.head.appendChild(breadcrumbScript);
+    
+    const productScript = document.createElement('script');
+    productScript.type = 'application/ld+json';
+    productScript.textContent = JSON.stringify(productSchema);
+    document.head.appendChild(productScript);
+
+    return () => {
+      document.head.removeChild(breadcrumbScript);
+      document.head.removeChild(productScript);
+    };
+  }, []);
   const specs = [{
     name: "Hubhöhe",
     kleinPiaggio: "21 Meter (5. Stock)",
@@ -93,9 +172,12 @@ const MoebelliftMieten = () => {
                 <div className="relative p-3 bg-white rounded-2xl shadow-xl rotate-1 transform transition-transform hover:rotate-0 duration-500 hero-image-wrapper">
                   <div className="overflow-hidden rounded-xl">
                     <img 
-                      alt="Möbellift im Einsatz" 
+                      alt="Grosser Piaggio Möbellift für einfachen und sicheren Möbeltransport" 
                       className="w-full h-auto transform hover:scale-105 transition-transform duration-700 hero-image" 
-                      src="/images/moebellifte/piaggo-gross/piaggo-gross1.webp" 
+                      src="/images/moebellifte/piaggo-gross/piaggo-gross1.webp"
+                      width={640}
+                      height={480}
+                      loading="eager"
                     />
                   </div>
                 </div>

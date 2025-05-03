@@ -68,9 +68,11 @@ const HeroSection = ({
                 </div>
               </div>
               <img 
-                alt="Video: Möbellift in Aktion" 
+                alt="Video: Möbellift in Aktion beim Transport von Möbeln durch ein Fenster" 
                 className="w-full h-auto" 
-                src="/lovable-uploads/9b6af9e7-6ebe-410a-a153-bd1a7e9253ea.png" 
+                src="/lovable-uploads/9b6af9e7-6ebe-410a-a153-bd1a7e9253ea.png"
+                width={800}
+                height={500}
               />
             </div>
           </div>
