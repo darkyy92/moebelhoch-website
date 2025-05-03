@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import { CookieNotice } from "./components/CookieNotice";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import MoebelliftMieten from "./pages/MoebelliftMieten";
@@ -14,6 +15,7 @@ import UeberUns from "./pages/UeberUns";
 import OffertenAnfordern from "./pages/OffertenAnfordern";
 import Datenschutz from "./pages/Datenschutz";
 import Impressum from "./pages/Impressum";
+import AGB from "./pages/AGB";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +26,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <CookieNotice />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/moebellift-mieten" element={<MoebelliftMieten />} />
@@ -33,6 +36,7 @@ const App = () => (
           <Route path="/ueber-uns" element={<UeberUns />} />
           <Route path="/offerten-anfordern" element={<OffertenAnfordern />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/agb" element={<AGB />} />
           <Route path="/impressum" element={<Impressum />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

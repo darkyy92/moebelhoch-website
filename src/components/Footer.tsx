@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import CookieSettings from './CookieSettings';
 const Footer = () => {
   return <footer className="bg-movers-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -99,9 +100,15 @@ const Footer = () => {
               <NavLink to="/datenschutz" className="bg-transparent border-2 border-white hover:bg-white/10 text-white hover:text-movers-yellow font-medium py-2 px-4 rounded-md transition-all duration-300">
                 Datenschutz
               </NavLink>
+              <NavLink to="/agb" className="bg-transparent border-2 border-white hover:bg-white/10 text-white hover:text-movers-yellow font-medium py-2 px-4 rounded-md transition-all duration-300">
+                AGB
+              </NavLink>
               <NavLink to="/impressum" className="bg-transparent border-2 border-white hover:bg-white/10 text-white hover:text-movers-yellow font-medium py-2 px-4 rounded-md transition-all duration-300">
                 Impressum
               </NavLink>
+              <div className="flex items-center mt-4 md:mt-0 pt-2 md:pt-0">
+                <CookieSettings />
+              </div>
             </div>
           </div>
         </div>

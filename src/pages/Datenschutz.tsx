@@ -46,11 +46,14 @@ const Datenschutz = () => {
               <div className="border-t border-gray-200 my-8"></div>
               
               <h2 className="text-2xl font-semibold mt-6 mb-4">4. Cookies und Tracking</h2>
+              <p>Unsere Website verwendet folgende Arten von Cookies:</p>
               <ul className="list-disc pl-6 mb-4">
-                <li>Session-Cookies: Für Grundfunktionen der Website notwendig.</li>
-                <li>Analytische Cookies: Anonymisiert; kein personenbezogenes Tracking.</li>
+                <li><strong>Essenziell:</strong> Für Grundfunktionen der Website notwendig (z.B. Session-Cookies). Diese Cookies können nicht deaktiviert werden.</li>
+                <li><strong>Analyse:</strong> Helfen uns zu verstehen, wie Besucher mit der Website interagieren (z.B. Google Analytics). Diese Daten werden anonymisiert.</li>
+                <li><strong>Marketing:</strong> Werden verwendet, um personalisierte Werbung anzuzeigen. Diese Cookies setzen wir nur mit Ihrer Einwilligung ein.</li>
               </ul>
-              <p>Sie können Cookies in Ihrem Browser deaktivieren; einige Funktionen könnten dann eingeschränkt sein.</p>
+              <p>Beim ersten Besuch unserer Website werden Sie über ein Cookie-Banner informiert und haben die Möglichkeit, Ihre Cookie-Einstellungen anzupassen. Sie können Ihre Einstellungen jederzeit über den Link "Cookie-Einstellungen" im Footer ändern.</p>
+              <p>Sie können Cookies auch in Ihrem Browser deaktivieren; einige Funktionen könnten dann eingeschränkt sein.</p>
               
               <div className="border-t border-gray-200 my-8"></div>
               
