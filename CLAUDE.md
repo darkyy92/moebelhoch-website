@@ -1,7 +1,8 @@
 # MöbelHoch Website Development Guide
 
-## Autostart
-- When opening Claude Code, automatically run: `npm run dev`
+## IMPORTANT: NEVER AUTO-START DEV SERVER
+- NEVER run `npm run dev` automatically
+- ONLY run development server when explicitly requested by user
 
 ## Commands
 - `npm run dev` - Start development server
