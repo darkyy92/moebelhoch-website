@@ -210,6 +210,49 @@ table.technical-specs td {
 
 .animate-fade-in-up {
   animation: fade-in-up 0.7s ease-out forwards;
+  will-change: opacity, transform;
+}
+
+.content-fade-in-up {
+  animation: fade-in-up 0.7s ease-out 0.2s forwards;
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Pre-rendered state to prevent flickering */
+.hero-image-container {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.6s ease-out 0.3s;
+}
+
+/* A special class that allows animations but prevents flickering */
+.hero-image-animate {
+  /* Without the !important settings to prevent animations */
+  opacity: 0;
+  transform: translateY(20px);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: opacity, transform;
+}
+
+/* Initial state for hero images to prevent flickering */
+.hero-image-wrapper {
+  position: relative;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* The image itself should never flicker */
+.hero-image {
+  display: block;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
 }
 
 .animate-bounce-subtle {

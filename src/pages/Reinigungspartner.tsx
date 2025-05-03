@@ -71,7 +71,7 @@ const Reinigungspartner = () => {
         <section className="py-20 md:py-28 bg-movers-primary text-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="animate-fade-in-up">
+              <div className="content-fade-in-up">
                 <div className="inline-block bg-white/20 text-white font-medium rounded-full py-1 px-4 mb-4">
                   Professionelle Reinigung
                 </div>
@@ -85,12 +85,12 @@ const Reinigungspartner = () => {
                   <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
-              <div className="relative z-10 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
-                <div className="relative p-3 bg-white rounded-2xl shadow-xl rotate-1 transform transition-transform hover:rotate-0 duration-500">
+              <div className="relative z-10 hero-image-container hero-image-animate animate-fade-in-up" style={{ animationDelay: '150ms' }}>
+                <div className="relative p-3 bg-white rounded-2xl shadow-xl rotate-1 transform transition-transform hover:rotate-0 duration-500 hero-image-wrapper">
                   <div className="overflow-hidden rounded-xl">
                     <img 
                       alt="Professionelle Reinigung" 
-                      className="w-full h-auto transform hover:scale-105 transition-transform duration-700" 
+                      className="w-full h-auto transform hover:scale-105 transition-transform duration-700 hero-image" 
                       src="/lovable-uploads/0943f207-b488-43ee-9750-96b71c454525.jpg" 
                     />
                   </div>

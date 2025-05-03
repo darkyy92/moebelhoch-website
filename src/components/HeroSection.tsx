@@ -28,7 +28,7 @@ const HeroSection = ({
   return <section className="bg-movers-primary pt-32 pb-16 md:pt-40 md:pb-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="z-10 animate-fade-in-up">
+          <div className="z-10 content-fade-in-up">
             <h3 className="text-movers-yellow font-semibold mb-2">{subtitle}</h3>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               {title}
@@ -52,7 +52,7 @@ const HeroSection = ({
               </Badge>
             )}
           </div>
-          <div className="relative z-10 animate-fade-in group cursor-pointer">
+          <div className="relative z-10 hero-image-container hero-image-animate animate-fade-in-up group cursor-pointer" style={{ animationDelay: '150ms' }}>
             {/* Price Badge */}
             <div className="absolute -right-4 top-4 z-20 bg-movers-yellow rounded-full w-24 h-24 shadow-lg flex flex-col items-center justify-center text-center">
               <p className="text-movers-primary font-bold text-sm">Ab CHF</p>

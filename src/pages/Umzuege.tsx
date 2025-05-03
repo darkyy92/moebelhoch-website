@@ -101,7 +101,7 @@ const Umzuege = () => {
         <section className="py-20 md:py-28 bg-movers-primary text-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="animate-fade-in-up">
+              <div className="content-fade-in-up">
                 <div className="inline-block bg-white/20 text-white font-medium rounded-full py-1 px-4 mb-4">
                   Professionelle Unterstützung
                 </div>
@@ -115,12 +115,12 @@ const Umzuege = () => {
                   <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
-              <div className="relative z-10 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
-                <div className="relative p-3 bg-white rounded-2xl shadow-xl rotate-1 transform transition-transform hover:rotate-0 duration-500">
+              <div className="relative z-10 hero-image-container hero-image-animate animate-fade-in-up" style={{ animationDelay: '150ms' }}>
+                <div className="relative p-3 bg-white rounded-2xl shadow-xl rotate-1 transform transition-transform hover:rotate-0 duration-500 hero-image-wrapper">
                   <div className="overflow-hidden rounded-xl">
                     <img 
                       alt="Umzugsservice Teamarbeit" 
-                      className="w-full h-auto transform hover:scale-105 transition-transform duration-700" 
+                      className="w-full h-auto transform hover:scale-105 transition-transform duration-700 hero-image" 
                       src="https://plus.unsplash.com/premium_photo-1681825046030-e3a13ba21f74?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                     />
                   </div>
