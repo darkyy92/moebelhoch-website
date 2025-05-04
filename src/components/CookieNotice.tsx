@@ -57,18 +57,18 @@ export const CookieNotice = () => {
       <div 
         className={cn(
           "fixed bottom-4 left-1/2 -translate-x-1/2 max-w-[90%] w-full md:max-w-2xl",
-          "rounded-xl backdrop-blur bg-primary/95 p-4 z-50 shadow-lg",
+          "rounded-xl backdrop-blur bg-white p-4 z-50 shadow-lg",
           "flex flex-col sm:flex-row gap-4 items-center justify-between"
         )}
         role="alert"
         aria-live="polite"
       >
-        <div className="text-sm md:text-base text-white">
+        <div className="text-sm md:text-base text-black">
           Diese Website verwendet Cookies, um Ihr Nutzungserlebnis zu verbessern. 
           Durch die Nutzung der Website stimmen Sie unserer{' '}
           <a 
             href="/datenschutz" 
-            className="underline font-medium"
+            className="underline font-medium text-primary"
             onClick={(e) => e.stopPropagation()}
           >
             Datenschutzerklärung
@@ -81,7 +81,7 @@ export const CookieNotice = () => {
             variant="secondary" 
             size="sm" 
             onClick={handleOpenSettings}
-            className="w-full sm:w-auto whitespace-nowrap text-white"
+            className="w-full sm:w-auto whitespace-nowrap bg-primary text-white"
           >
             Einstellungen
           </Button>
@@ -89,7 +89,7 @@ export const CookieNotice = () => {
             variant="default" 
             size="sm" 
             onClick={handleAcceptAll}
-            className="w-full sm:w-auto whitespace-nowrap"
+            className="w-full sm:w-auto whitespace-nowrap bg-emerald-600 hover:bg-emerald-700"
           >
             OK
           </Button>
